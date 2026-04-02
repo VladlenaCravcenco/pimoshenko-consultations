@@ -26,7 +26,7 @@ const SceneFormat = () => {
         className="lg:w-1/2 min-h-[50vh] lg:min-h-screen flex flex-col items-center justify-center bg-background"
       >
         <h2 className="text-brutal-xl text-foreground">{t("format.offline")}</h2>
-        <p className="text-brutal-md text-accent-red mt-4">{t("format.dubai")}</p>
+        <p className="text-brutal-sm text-muted-foreground mt-6 tracking-[0.3em]">{t("format.global")}</p>
       </motion.div>
     </section>
   );
