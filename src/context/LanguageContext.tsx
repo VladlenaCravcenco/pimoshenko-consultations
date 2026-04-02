@@ -121,17 +121,17 @@ const translations: Translations = {
   // Scene 9
   "format.online": { ru: "ОНЛАЙН", en: "ONLINE", ro: "ONLINE" },
   "format.offline": { ru: "ОФЛАЙН", en: "OFFLINE", ro: "OFFLINE" },
-  "format.dubai": { ru: "ДУБАЙ", en: "DUBAI", ro: "DUBAI" },
+  "format.global": { ru: "РАБОТАЕМ ПО ВСЕМУ МИРУ", en: "WORKING WORLDWIDE", ro: "LUCRĂM ÎN TOATĂ LUMEA" },
   // Scene 10
-  "geo.subtitle": {
-    ru: "РАБОТАЕМ ГЛОБАЛЬНО",
-    en: "WORKING GLOBALLY",
-    ro: "LUCRĂM GLOBAL",
+  "geo.global": {
+    ru: "ГЛОБАЛЬНО",
+    en: "GLOBAL",
+    ro: "GLOBAL",
   },
   "geo.locations": {
-    ru: "МОСКВА · КИШИНЁВ · СТАМБУЛ · ОНЛАЙН",
-    en: "MOSCOW · CHISINAU · ISTANBUL · ONLINE",
-    ro: "MOSCOVA · CHIȘINĂU · ISTANBUL · ONLINE",
+    ru: "МОСКВА · КИШИНЁВ · СТАМБУЛ · И ДАЛЕЕ",
+    en: "MOSCOW · CHISINAU · ISTANBUL · BEYOND",
+    ro: "MOSCOVA · CHIȘINĂU · ISTANBUL · MAI DEPARTE",
   },
   // Scene 11
   "price.now": { ru: "СЕЙЧАС", en: "NOW", ro: "ACUM" },
