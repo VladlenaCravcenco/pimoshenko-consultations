@@ -98,6 +98,19 @@ const translations: Translations = {
   "positioning.right.2": { ru: "ЯСНОСТЬ", en: "CLARITY", ro: "CLARITATE" },
   "positioning.right.3": { ru: "ДЕНЬГИ", en: "MONEY", ro: "BANI" },
   "positioning.right.4": { ru: "РЕЗУЛЬТАТ", en: "RESULT", ro: "REZULTAT" },
+  // Logos
+  "logos.title": { ru: "РАБОТАЛИ С", en: "WORKED WITH", ro: "AM LUCRAT CU" },
+  // Cases
+  "cases.title": { ru: "КЕЙСЫ", en: "CASES", ro: "CAZURI" },
+  "cases.1.metric": { ru: "РОСТ ВЫРУЧКИ", en: "REVENUE GROWTH", ro: "CREȘTERE VENITURI" },
+  "cases.1.title": { ru: "РЕСТОРАННЫЙ БИЗНЕС", en: "RESTAURANT BUSINESS", ro: "AFACERE RESTAURANT" },
+  "cases.1.desc": { ru: "ПЕРЕСТРОИЛИ ПОЗИЦИОНИРОВАНИЕ И КОНТЕНТ. ЗА 3 МЕСЯЦА ВЫРУЧКА ВЫРОСЛА В 4 РАЗА.", en: "REBUILT POSITIONING AND CONTENT. REVENUE GREW 4X IN 3 MONTHS.", ro: "AM RECONSTRUIT POZIȚIONAREA ȘI CONȚINUTUL. VENITURILE AU CRESCUT DE 4X ÎN 3 LUNI." },
+  "cases.2.metric": { ru: "ВЫРУЧКА ЗА МЕСЯЦ", en: "REVENUE PER MONTH", ro: "VENITURI PE LUNĂ" },
+  "cases.2.title": { ru: "ОНЛАЙН-ШКОЛА", en: "ONLINE SCHOOL", ro: "ȘCOALĂ ONLINE" },
+  "cases.2.desc": { ru: "БРИФ → СТРАТЕГИЯ → СИСТЕМА ПРОДАЖ. ПЕРВЫЙ ЗАПУСК — €47K.", en: "BRIEF → STRATEGY → SALES SYSTEM. FIRST LAUNCH — €47K.", ro: "BRIEF → STRATEGIE → SISTEM VÂNZĂRI. PRIMA LANSARE — €47K." },
+  "cases.3.metric": { ru: "ПОДПИСЧИКОВ", en: "FOLLOWERS", ro: "URMĂRITORI" },
+  "cases.3.title": { ru: "ЛИЧНЫЙ БРЕНД", en: "PERSONAL BRAND", ro: "BRAND PERSONAL" },
+  "cases.3.desc": { ru: "СТРОИЛИ С НУЛЯ. ПОЗИЦИОНИРОВАНИЕ, ВИЗУАЛ, СТРАТЕГИЯ КОНТЕНТА. 12K ЗА 4 МЕСЯЦА.", en: "BUILT FROM ZERO. POSITIONING, VISUAL, CONTENT STRATEGY. 12K IN 4 MONTHS.", ro: "CONSTRUIT DE LA ZERO. POZIȚIONARE, VIZUAL, STRATEGIE. 12K ÎN 4 LUNI." },
   // Scene 7
   "proof.clients": { ru: "КЛИЕНТОВ", en: "CLIENTS", ro: "CLIENȚI" },
   "proof.countries": { ru: "СТРАН", en: "COUNTRIES", ro: "ȚĂRI" },
@@ -123,28 +136,36 @@ const translations: Translations = {
   "format.offline": { ru: "ОФЛАЙН", en: "OFFLINE", ro: "OFFLINE" },
   "format.global": { ru: "РАБОТАЕМ ПО ВСЕМУ МИРУ", en: "WORKING WORLDWIDE", ro: "LUCRĂM ÎN TOATĂ LUMEA" },
   // Scene 10
-  "geo.global": {
-    ru: "ГЛОБАЛЬНО",
-    en: "GLOBAL",
-    ro: "GLOBAL",
-  },
+  "geo.global": { ru: "ГЛОБАЛЬНО", en: "GLOBAL", ro: "GLOBAL" },
   "geo.locations": {
     ru: "МОСКВА · КИШИНЁВ · СТАМБУЛ · И ДАЛЕЕ",
     en: "MOSCOW · CHISINAU · ISTANBUL · BEYOND",
     ro: "MOSCOVA · CHIȘINĂU · ISTANBUL · MAI DEPARTE",
   },
-  // Scene 11
-  "price.now": { ru: "СЕЙЧАС", en: "NOW", ro: "ACUM" },
-  "price.full": { ru: "ПОЛНАЯ ЦЕНА", en: "FULL PRICE", ro: "PREȚ COMPLET" },
-  // Scene 12
+  // Price
+  "price.full": { ru: "ПОЛНАЯ СТОИМОСТЬ", en: "FULL PRICE", ro: "PREȚ COMPLET" },
+  "price.booking": { ru: "БРОНЬ", en: "BOOKING", ro: "REZERVARE" },
+  "price.remainder": { ru: "ОСТАТОК ОПЛАЧИВАЕТСЯ ПЕРЕД СЕССИЕЙ", en: "REMAINDER PAID BEFORE SESSION", ro: "RESTUL SE PLĂTEȘTE ÎNAINTE DE SESIUNE" },
+  "price.includes": { ru: "ЧТО ВХОДИТ", en: "WHAT'S INCLUDED", ro: "CE INCLUDE" },
+  "price.inc.1": { ru: "ПОЛНЫЙ АУДИТ АККАУНТА", en: "FULL ACCOUNT AUDIT", ro: "AUDIT COMPLET AL CONTULUI" },
+  "price.inc.2": { ru: "СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ", en: "POSITIONING STRATEGY", ro: "STRATEGIE DE POZIȚIONARE" },
+  "price.inc.3": { ru: "КОНТЕНТ-ПЛАН НА 30 ДНЕЙ", en: "30-DAY CONTENT PLAN", ro: "PLAN DE CONȚINUT 30 ZILE" },
+  "price.inc.4": { ru: "ВИЗУАЛЬНАЯ СИСТЕМА", en: "VISUAL SYSTEM", ro: "SISTEM VIZUAL" },
+  "price.inc.5": { ru: "СИСТЕМА ПРОДАЖ ЧЕРЕЗ INSTAGRAM", en: "INSTAGRAM SALES SYSTEM", ro: "SISTEM VÂNZĂRI INSTAGRAM" },
+  "price.inc.6": { ru: "РАЗБОР ВОРОНКИ", en: "FUNNEL BREAKDOWN", ro: "ANALIZA PÂLNIEI" },
+  "price.inc.7": { ru: "2 НЕДЕЛИ ПОДДЕРЖКИ ПОСЛЕ СЕССИИ", en: "2 WEEKS POST-SESSION SUPPORT", ro: "2 SĂPTĂMÂNI SUPORT POST-SESIUNE" },
+  // Booking
   "booking.step1": { ru: "ИМЯ", en: "NAME", ro: "NUME" },
   "booking.step2": { ru: "INSTAGRAM", en: "INSTAGRAM", ro: "INSTAGRAM" },
   "booking.step3": { ru: "БИЗНЕС", en: "BUSINESS", ro: "AFACERE" },
-  "booking.send": { ru: "ОТПРАВИТЬ →", en: "SEND →", ro: "TRIMITE →" },
+  "booking.next": { ru: "ДАЛЕЕ", en: "NEXT", ro: "URMĂTORUL" },
+  "booking.date": { ru: "ВЫБЕРИ ДЕНЬ", en: "CHOOSE A DAY", ro: "ALEGE O ZI" },
+  "booking.time": { ru: "ВЫБЕРИ ВРЕМЯ", en: "CHOOSE TIME", ro: "ALEGE ORA" },
+  "booking.pay": { ru: "ОПЛАТИТЬ БРОНЬ €200 →", en: "PAY BOOKING €200 →", ro: "PLĂTEȘTE REZERVAREA €200 →" },
   "booking.placeholder.name": { ru: "Как тебя зовут?", en: "What's your name?", ro: "Cum te cheamă?" },
   "booking.placeholder.ig": { ru: "@username", en: "@username", ro: "@username" },
   "booking.placeholder.biz": { ru: "Чем занимаешься?", en: "What do you do?", ro: "Cu ce te ocupi?" },
-  // Scene 13
+  // Final
   "final.line1": {
     ru: "ТЫ ЛИБО ДЕЛАЕШЬ",
     en: "YOU EITHER DO IT",
