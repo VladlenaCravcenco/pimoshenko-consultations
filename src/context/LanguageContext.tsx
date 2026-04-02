@@ -55,11 +55,30 @@ const translations: Translations = {
     ro: "PROBLEMA EȘTI TU.",
   },
   // Scene 3
-  "facts.years": { ru: "ЛЕТ", en: "YEARS", ro: "ANI" },
-  "facts.agency": { ru: "АГЕНТСТВО", en: "AGENCY", ro: "AGENȚIE" },
-  "facts.extra": { ru: "БИЗНЕС", en: "BUSINESS", ro: "AFACERI" },
-  "facts.padel": { ru: "ПАДЕЛЬ", en: "PADEL", ro: "PADEL" },
-  "facts.chinese": { ru: "КИТАЙСКИЙ", en: "CHINESE", ro: "CHINEZĂ" },
+  "facts.years": { ru: "ЛЕТ В МАРКЕТИНГЕ", en: "YEARS IN MARKETING", ro: "ANI ÎN MARKETING" },
+  "facts.years.desc": {
+    ru: "Начинала с SMM в 2014 году. Прошла путь от контент-менеджера до стратега, который строит бренды с нуля и выводит их на новый уровень.",
+    en: "Started in SMM in 2014. Went from content manager to strategist who builds brands from scratch and takes them to the next level.",
+    ro: "Am început în SMM în 2014. Am parcurs drumul de la content manager la strateg care construiește branduri de la zero.",
+  },
+  "facts.agency": { ru: "АГЕНТСТВО 33", en: "AGENCY 33", ro: "AGENȚIA 33" },
+  "facts.agency.desc": {
+    ru: "Основала собственное агентство, специализирующееся на стратегическом маркетинге и Instagram-продвижении для бизнеса и личных брендов.",
+    en: "Founded her own agency specializing in strategic marketing and Instagram promotion for businesses and personal brands.",
+    ro: "A fondat propria agenție specializată în marketing strategic și promovare Instagram pentru afaceri și branduri personale.",
+  },
+  "facts.extra": { ru: "БИЗНЕС EXTRA", en: "EXTRA BUSINESS", ro: "AFACERE EXTRA" },
+  "facts.extra.desc": {
+    ru: "Параллельно развивает собственный бизнес-проект EXTRA — практический опыт, который напрямую отражается в консультациях.",
+    en: "Simultaneously developing her own business project EXTRA — hands-on experience that directly translates into consultations.",
+    ro: "Dezvoltă simultan propriul proiect de afaceri EXTRA — experiență practică reflectată direct în consultanțe.",
+  },
+  "facts.chinese": { ru: "КИТАЙСКИЙ ЯЗЫК", en: "CHINESE LANGUAGE", ro: "LIMBA CHINEZĂ" },
+  "facts.chinese.desc": {
+    ru: "Свободно владеет китайским языком. Работает с международными клиентами и понимает специфику азиатского маркетинга.",
+    en: "Fluent in Chinese. Works with international clients and understands the specifics of Asian marketing.",
+    ro: "Vorbește fluent limba chineză. Lucrează cu clienți internaționali și înțelege specificul marketingului asiatic.",
+  },
   // Scene 4
   "presence.line": {
     ru: "Я НЕ УЧИТЕЛЬ. Я ТОТ, КТО ДЕЛАЕТ.",
