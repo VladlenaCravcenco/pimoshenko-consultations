@@ -1,16 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { LanguageProvider } from "@/context/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SceneImpact from "@/components/scenes/SceneImpact";
+import SceneDisruption from "@/components/scenes/SceneDisruption";
+import SceneRawFacts from "@/components/scenes/SceneRawFacts";
+import ScenePresence from "@/components/scenes/ScenePresence";
+import SceneProcess from "@/components/scenes/SceneProcess";
+import ScenePositioning from "@/components/scenes/ScenePositioning";
+import SceneProof from "@/components/scenes/SceneProof";
+import SceneVoices from "@/components/scenes/SceneVoices";
+import SceneFormat from "@/components/scenes/SceneFormat";
+import SceneGeography from "@/components/scenes/SceneGeography";
+import ScenePrice from "@/components/scenes/ScenePrice";
+import SceneBooking from "@/components/scenes/SceneBooking";
+import SceneFinal from "@/components/scenes/SceneFinal";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <LanguageProvider>
+      <LanguageSwitcher />
+      <main className="bg-background">
+        <SceneImpact />
+        <SceneDisruption />
+        <SceneRawFacts />
+        <ScenePresence />
+        <SceneProcess />
+        <ScenePositioning />
+        <SceneProof />
+        <SceneVoices />
+        <SceneFormat />
+        <SceneGeography />
+        <ScenePrice />
+        <SceneBooking />
+        <SceneFinal />
+      </main>
+    </LanguageProvider>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
