@@ -15,6 +15,7 @@ import SceneGeography from "@/components/scenes/SceneGeography";
 import ScenePrice from "@/components/scenes/ScenePrice";
 import SceneBooking from "@/components/scenes/SceneBooking";
 import SceneFinal from "@/components/scenes/SceneFinal";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -36,6 +37,7 @@ const Index = () => {
         <ScenePrice />
         <SceneBooking />
         <SceneFinal />
+        <Footer />
       </main>
     </LanguageProvider>
   );
