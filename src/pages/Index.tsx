@@ -11,7 +11,7 @@ import SceneCases from "@/components/scenes/SceneCases";
 import SceneProof from "@/components/scenes/SceneProof";
 import SceneVoices from "@/components/scenes/SceneVoices";
 import SceneFormat from "@/components/scenes/SceneFormat";
-import SceneGeography from "@/components/scenes/SceneGeography";
+
 import ScenePrice from "@/components/scenes/ScenePrice";
 import SceneBooking from "@/components/scenes/SceneBooking";
 import SceneFinal from "@/components/scenes/SceneFinal";
@@ -33,7 +33,7 @@ const Index = () => {
         <SceneProof />
         <SceneVoices />
         <SceneFormat />
-        <SceneGeography />
+        
         <ScenePrice />
         <SceneBooking />
         <SceneFinal />
