@@ -33,7 +33,7 @@ const Index = () => {
         <SceneProof />
         <SceneVoices />
         <SceneFormat />
-        <SceneGeography />
+        
         <ScenePrice />
         <SceneBooking />
         <SceneFinal />
