@@ -164,6 +164,7 @@ const translations: Translations = {
   "format.online": { ru: "ОНЛАЙН", en: "ONLINE", ro: "ONLINE" },
   "format.offline": { ru: "ОФЛАЙН", en: "OFFLINE", ro: "OFFLINE" },
   "format.global": { ru: "РАБОТАЕМ ПО ВСЕМУ МИРУ", en: "WORKING WORLDWIDE", ro: "LUCRĂM ÎN TOATĂ LUMEA" },
+  "format.cta": { ru: "ЗАПИСАТЬСЯ →", en: "BOOK NOW →", ro: "REZERVĂ →" },
   // Scene 10
   "geo.global": { ru: "ГЛОБАЛЬНО", en: "GLOBAL", ro: "GLOBAL" },
   "geo.locations": {
