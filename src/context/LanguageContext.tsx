@@ -40,44 +40,55 @@ const translations: Translations = {
     ro: "POSTEZI ÎN FIECARE ZI.",
   },
   "disruption.2": {
-    ru: "НИКТО НЕ ПОКУПАЕТ.",
-    en: "NOBODY BUYS.",
-    ro: "NIMENI NU CUMPĂRĂ.",
+    ru: "ТЫ НЕ ЗНАЕШЬ, ЧТО ВЫСТАВИТЬ.",
+    en: "YOU DON'T KNOW WHAT TO POST.",
+    ro: "NU ȘTII CE SĂ POSTEZI.",
   },
   "disruption.3": {
+    ru: "ПРЕДЛОЖЕНИЯ НЕ ПРИХОДЯТ.",
+    en: "OFFERS DON'T COME.",
+    ro: "OFERTELE NU VIN.",
+  },
+  "disruption.4": {
     ru: "ТЫ ДУМАЕШЬ, ЧТО ПРОБЛЕМА В КОНТЕНТЕ.",
     en: "YOU THINK THE PROBLEM IS CONTENT.",
     ro: "CREZI CĂ PROBLEMA E CONȚINUTUL.",
   },
-  "disruption.4": {
-    ru: "ПРОБЛЕМА — ТЫ.",
-    en: "THE PROBLEM IS YOU.",
-    ro: "PROBLEMA EȘTI TU.",
+  "disruption.5": {
+    ru: "ПРОБЛЕМА — ОТСУТСТВИЕ СТРАТЕГИИ.",
+    en: "THE PROBLEM IS NO STRATEGY.",
+    ro: "PROBLEMA E LIPSA STRATEGIEI.",
   },
   // Scene 3
   "facts.years": { ru: "ЛЕТ В МАРКЕТИНГЕ", en: "YEARS IN MARKETING", ro: "ANI ÎN MARKETING" },
   "facts.years.desc": {
-    ru: "Начинала с SMM в 2014 году. Прошла путь от контент-менеджера до стратега, который строит бренды с нуля и выводит их на новый уровень.",
-    en: "Started in SMM in 2014. Went from content manager to strategist who builds brands from scratch and takes them to the next level.",
-    ro: "Am început în SMM în 2014. Am parcurs drumul de la content manager la strateg care construiește branduri de la zero.",
+    ru: "Я вела бренды в Инстаграм с 2016 года, когда все выставляли квадратные фото, а сторис не существовала.",
+    en: "I've been leading brands on Instagram since 2016, when everyone posted square photos and stories didn't exist.",
+    ro: "Conduc branduri pe Instagram din 2016, când toți postau poze pătrate și story-urile nu existau.",
   },
   "facts.agency": { ru: "АГЕНТСТВО 33", en: "AGENCY 33", ro: "AGENȚIA 33" },
   "facts.agency.desc": {
-    ru: "Основала собственное агентство, специализирующееся на стратегическом маркетинге и Instagram-продвижении для бизнеса и личных брендов.",
-    en: "Founded her own agency specializing in strategic marketing and Instagram promotion for businesses and personal brands.",
-    ro: "A fondat propria agenție specializată în marketing strategic și promovare Instagram pentru afaceri și branduri personale.",
+    ru: "Маркетинговое агентство. Создала сильную команду, которая комплексно работает с брендом и выстраивает долгосрочные стратегии продвижения. От съёмок до мероприятий. Идеальный баланс между структурой и креативом.",
+    en: "Marketing agency. I built a strong team that works comprehensively with brands and creates long-term promotion strategies. From shoots to events. The perfect balance between structure and creativity.",
+    ro: "Agenție de marketing. Am creat o echipă puternică ce lucrează complex cu brandul și construiește strategii de promovare pe termen lung. De la filmări la evenimente. Echilibrul perfect între structură și creativitate.",
   },
-  "facts.extra": { ru: "БИЗНЕС EXTRA", en: "EXTRA BUSINESS", ro: "AFACERE EXTRA" },
+  "facts.extra": { ru: "EXTRA CLUB", en: "EXTRA CLUB", ro: "EXTRA CLUB" },
   "facts.extra.desc": {
-    ru: "Параллельно развивает собственный бизнес-проект EXTRA — практический опыт, который напрямую отражается в консультациях.",
-    en: "Simultaneously developing her own business project EXTRA — hands-on experience that directly translates into consultations.",
-    ro: "Dezvoltă simultan propriul proiect de afaceri EXTRA — experiență practică reflectată direct în consultanțe.",
+    ru: "Основатель спортивного сообщества, где людей объединяет спорт, желание развиваться сразу в нескольких направлениях и яркость жизни. Здесь нет предела твоим возможностям.",
+    en: "Founder of a sports community where people are united by sport, the desire to grow in multiple directions and the brightness of life. There's no limit to your possibilities here.",
+    ro: "Fondator al unei comunități sportive unde oamenii sunt uniți de sport, dorința de a se dezvolta în mai multe direcții și intensitatea vieții. Aici nu există limite pentru posibilitățile tale.",
   },
-  "facts.chinese": { ru: "КИТАЙСКИЙ ЯЗЫК", en: "CHINESE LANGUAGE", ro: "LIMBA CHINEZĂ" },
-  "facts.chinese.desc": {
-    ru: "Свободно владеет китайским языком. Работает с международными клиентами и понимает специфику азиатского маркетинга.",
-    en: "Fluent in Chinese. Works with international clients and understands the specifics of Asian marketing.",
-    ro: "Vorbește fluent limba chineză. Lucrează cu clienți internaționali și înțelege specificul marketingului asiatic.",
+  "facts.course": { ru: "АВТОРСКИЙ КУРС SMM", en: "AUTHOR'S SMM COURSE", ro: "CURS DE AUTOR SMM" },
+  "facts.course.desc": {
+    ru: "За 5 дней — старт в новой профессии. Для тех, кто хочет быть SMM-экспертом и работать с брендами.",
+    en: "In 5 days — start in a new profession. For those who want to be an SMM expert and work with brands.",
+    ro: "În 5 zile — start într-o profesie nouă. Pentru cei care vor să fie expert SMM și să lucreze cu branduri.",
+  },
+  "facts.niches": { ru: "НИШ В ПРОДВИЖЕНИИ", en: "NICHES IN PROMOTION", ro: "NIȘE ÎN PROMOVARE" },
+  "facts.niches.desc": {
+    ru: "Опыт работы с разными нишами: от ресторанов и beauty до fashion-брендов и личных брендов. Понимаю специфику каждого рынка.",
+    en: "Experience with different niches: from restaurants and beauty to fashion brands and personal brands. I understand the specifics of every market.",
+    ro: "Experiență cu nișe diferite: de la restaurante și beauty la branduri fashion și personale. Înțeleg specificul fiecărei piețe.",
   },
   // Scene 4
   "presence.line": {
