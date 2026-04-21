@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 
 const facts = [
-  { number: "10+", label: "facts.years", desc: "facts.years.desc" },
+  { number: "10", label: "facts.years", desc: "facts.years.desc" },
   { number: "33", label: "facts.agency", desc: "facts.agency.desc" },
   { number: "EXTRA", label: "facts.extra", desc: "facts.extra.desc" },
-  { number: "中文", label: "facts.chinese", desc: "facts.chinese.desc" },
+  { number: "5", label: "facts.course", desc: "facts.course.desc" },
+  { number: "30+", label: "facts.niches", desc: "facts.niches.desc" },
 ];
 
 const SceneRawFacts = () => {
