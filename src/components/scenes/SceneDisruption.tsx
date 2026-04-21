@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 
-const lines = ["disruption.1", "disruption.2", "disruption.3", "disruption.4"];
+const lines = ["disruption.1", "disruption.2", "disruption.3", "disruption.4", "disruption.5"];
 
 const SceneDisruption = () => {
   const { t } = useLang();
