@@ -11,20 +11,20 @@ const translations: Translations = {
   "hero.line1": {
     ru: "ТВОЙ",
     en: "YOUR",
-    ro: "AL TĂU",
+    ro: "BRANDUL",
   },
   "hero.line2": {
-    ru: "ИНСТАГРАМ",
-    en: "INSTAGRAM",
-    ro: "INSTAGRAM",
+    ru: "БРЕНД",
+    en: "BRAND",
+    ro: "TĂU",
   },
   "hero.line3": {
-    ru: "НЕ РАБО",
+    ru: "НЕ",
     en: "DOES",
     ro: "NU",
   },
   "hero.line4": {
-    ru: "ТАЕТ",
+    ru: "РАБОТАЕТ",
     en: "NOT WORK",
     ro: "FUNCȚIO­NEAZĂ",
   },
