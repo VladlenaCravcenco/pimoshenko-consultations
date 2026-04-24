@@ -31,7 +31,7 @@ const SceneProof = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <span className="text-brutal-xl text-accent-red">500+</span>
+          <span className="text-brutal-xl text-accent-red">30+</span>
           <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.clients")}</p>
         </motion.div>
         <motion.div
@@ -41,7 +41,7 @@ const SceneProof = () => {
           viewport={{ once: true }}
           className="self-end text-right"
         >
-          <span className="text-brutal-xl text-foreground">12</span>
+          <span className="text-brutal-xl text-foreground">2M+</span>
           <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.countries")}</p>
         </motion.div>
         <motion.div
@@ -50,7 +50,7 @@ const SceneProof = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <span className="text-brutal-xl text-foreground">$2M+</span>
+          <span className="text-brutal-xl text-foreground">5+</span>
           <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.revenue")}</p>
         </motion.div>
       </div>
