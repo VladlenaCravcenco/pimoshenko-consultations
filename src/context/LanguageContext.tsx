@@ -386,6 +386,7 @@ const translations: Translations = {
     ro: "LOCURI LIMITATE",
   },
   "course.final.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО →", en: "RESERVE SEAT →", ro: "REZERVĂ LOCUL →" },
+};
 
 const LanguageContext = createContext<{
   lang: Lang;
