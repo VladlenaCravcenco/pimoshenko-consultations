@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useLang } from "@/context/LanguageContext";
 
-const pastWaves = [
-  { city: "CHISINAU", year: "2023", count: "30+" },
-  { city: "MOSCOW", year: "2022", count: "50+" },
-  { city: "ISTANBUL", year: "2024", count: "25+" },
-];
-
 const SceneOfflinePreview = () => {
   const { t } = useLang();
+
+  const pastWaves = [
+    { name: t("offline.wave.1.name"), year: t("offline.wave.1.year"), count: t("offline.wave.1.count") },
+    { name: t("offline.wave.2.name"), year: t("offline.wave.2.year"), count: t("offline.wave.2.count") },
+    { name: t("offline.wave.3.name"), year: t("offline.wave.3.year"), count: t("offline.wave.3.count") },
+  ];
 
   return (
     <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
@@ -56,7 +56,7 @@ const SceneOfflinePreview = () => {
           <div className="space-y-0">
             {pastWaves.map((w, i) => (
               <motion.div
-                key={w.city}
+                key={w.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
@@ -66,15 +66,44 @@ const SceneOfflinePreview = () => {
                 <span className="col-span-1 text-brutal-sm text-muted-foreground">
                   0{i + 1}
                 </span>
-                <span className="col-span-5 text-brutal-md">{w.city}</span>
+                <span className="col-span-5 text-brutal-md">{w.name}</span>
                 <span className="col-span-3 text-brutal-sm text-muted-foreground">
                   {w.year}
                 </span>
-                <span className="col-span-3 text-right text-brutal-md text-accent-red">
+                <span className="col-span-3 text-right text-brutal-sm text-accent-red">
                   {w.count}
                 </span>
               </motion.div>
             ))}
+
+            {/* Upcoming wave */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-12 gap-4 py-6 border-t border-foreground/10 items-baseline bg-accent/5"
+            >
+              <span className="col-span-1 text-brutal-sm text-accent-red">
+                04
+              </span>
+              <span className="col-span-4 text-brutal-md text-accent-red">
+                {t("offline.wave.4.name")}
+              </span>
+              <span className="col-span-2 text-brutal-sm text-accent-red">
+                {t("offline.wave.4.year")}
+              </span>
+              <span className="col-span-2 text-brutal-sm text-muted-foreground">
+                {t("offline.wave.4.count")}
+              </span>
+              <Link
+                to="/course"
+                className="col-span-3 text-right text-brutal-sm text-accent hover:text-foreground transition-colors"
+              >
+                {t("offline.wave.4.more")}
+              </Link>
+            </motion.div>
+
             <div className="border-t border-foreground/10" />
           </div>
         </div>

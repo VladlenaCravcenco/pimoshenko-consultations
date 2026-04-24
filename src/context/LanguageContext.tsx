@@ -254,12 +254,27 @@ const translations: Translations = {
   "offline.label": { ru: "ОФЛАЙН-ОПЫТ", en: "OFFLINE EXPERIENCE", ro: "EXPERIENȚĂ OFFLINE" },
   "offline.title": { ru: "ОФЛАЙН-КУРСЫ", en: "OFFLINE COURSES", ro: "CURSURI OFFLINE" },
   "offline.desc": {
-    ru: "Уже провела офлайн-интенсивы в Кишинёве, Москве и Стамбуле. Сотни выпускников. Теперь — новый поток.",
-    en: "I've already run offline intensives in Chisinau, Moscow and Istanbul. Hundreds of graduates. Now — a new wave.",
-    ro: "Am condus deja intensive offline la Chișinău, Moscova și Istanbul. Sute de absolvenți. Acum — un nou flux.",
+    ru: "Уже провела несколько офлайн-потоков в Кишинёве. Сотни выпускников, реальные результаты. Сейчас открыта запись на новый поток.",
+    en: "I've already run several offline waves in Chisinau. Hundreds of graduates, real results. Registration is now open for the new wave.",
+    ro: "Am condus deja câteva fluxuri offline la Chișinău. Sute de absolvenți, rezultate reale. Înscrierile pentru noul flux sunt deschise.",
   },
   "offline.cta": { ru: "НОВЫЙ КУРС ПО SMM →", en: "NEW SMM COURSE →", ro: "NOU CURS SMM →" },
   "offline.past": { ru: "ПРОШЛЫЕ ПОТОКИ", en: "PAST WAVES", ro: "FLUXURI ANTERIOARE" },
+  // Past waves — creative course names
+  "offline.wave.1.name": { ru: "BRAND CODE", en: "BRAND CODE", ro: "BRAND CODE" },
+  "offline.wave.1.year": { ru: "2022", en: "2022", ro: "2022" },
+  "offline.wave.1.count": { ru: "30+ УЧАСТНИКОВ", en: "30+ PARTICIPANTS", ro: "30+ PARTICIPANȚI" },
+  "offline.wave.2.name": { ru: "REELS LAB", en: "REELS LAB", ro: "REELS LAB" },
+  "offline.wave.2.year": { ru: "2023", en: "2023", ro: "2023" },
+  "offline.wave.2.count": { ru: "50+ УЧАСТНИКОВ", en: "50+ PARTICIPANTS", ro: "50+ PARTICIPANȚI" },
+  "offline.wave.3.name": { ru: "SOLD OUT", en: "SOLD OUT", ro: "SOLD OUT" },
+  "offline.wave.3.year": { ru: "2024", en: "2024", ro: "2024" },
+  "offline.wave.3.count": { ru: "40+ УЧАСТНИКОВ", en: "40+ PARTICIPANTS", ro: "40+ PARTICIPANȚI" },
+  // Upcoming wave
+  "offline.wave.4.name": { ru: "SMM SYSTEM", en: "SMM SYSTEM", ro: "SMM SYSTEM" },
+  "offline.wave.4.year": { ru: "СКОРО", en: "SOON", ro: "ÎN CURÂND" },
+  "offline.wave.4.count": { ru: "ОСТАЛОСЬ 12 МЕСТ", en: "12 SEATS LEFT", ro: "AU RĂMAS 12 LOCURI" },
+  "offline.wave.4.more": { ru: "ПОДРОБНЕЕ →", en: "LEARN MORE →", ro: "DETALII →" },
   // Floating CTA
   "float.cta": { ru: "КУРС ПО SMM", en: "SMM COURSE", ro: "CURS SMM" },
   // Course page
@@ -333,6 +348,107 @@ const translations: Translations = {
     en: "Project defense, feedback, ready 3-month strategy.",
     ro: "Apărarea proiectelor, feedback, strategie gata pe 3 luni.",
   },
+  // Program details — what's inside each day
+  "course.prog.d1.p1": {
+    ru: "Анализ ниши и конкурентов",
+    en: "Niche & competitor analysis",
+    ro: "Analiza nișei și a concurenților",
+  },
+  "course.prog.d1.p2": {
+    ru: "Распаковка личного бренда / бизнеса",
+    en: "Unpacking personal brand / business",
+    ro: "Despachetarea brandului personal / afacerii",
+  },
+  "course.prog.d1.p3": {
+    ru: "Целевая аудитория и её боли",
+    en: "Target audience and their pains",
+    ro: "Audiența țintă și durerile ei",
+  },
+  "course.prog.d1.p4": {
+    ru: "Уникальное позиционирование и смыслы",
+    en: "Unique positioning and meanings",
+    ro: "Poziționare unică și semnificații",
+  },
+  "course.prog.d2.p1": {
+    ru: "Контент-план на 30 дней",
+    en: "30-day content plan",
+    ro: "Plan de conținut pe 30 de zile",
+  },
+  "course.prog.d2.p2": {
+    ru: "Рубрики, форматы, прогревы",
+    en: "Rubrics, formats, warm-ups",
+    ro: "Rubrici, formate, încălziri",
+  },
+  "course.prog.d2.p3": {
+    ru: "Сценарии рилсов, которые залетают",
+    en: "Reels scripts that go viral",
+    ro: "Scenarii de reels care devin virale",
+  },
+  "course.prog.d2.p4": {
+    ru: "Сторителлинг в сторис",
+    en: "Storytelling in stories",
+    ro: "Storytelling în story",
+  },
+  "course.prog.d3.p1": {
+    ru: "Визуальная айдентика и палитра",
+    en: "Visual identity and palette",
+    ro: "Identitate vizuală și paletă",
+  },
+  "course.prog.d3.p2": {
+    ru: "Практика съёмки на телефон",
+    en: "Phone shooting practice",
+    ro: "Practică de filmare pe telefon",
+  },
+  "course.prog.d3.p3": {
+    ru: "Монтаж рилсов в CapCut",
+    en: "Editing reels in CapCut",
+    ro: "Montaj reels în CapCut",
+  },
+  "course.prog.d3.p4": {
+    ru: "Эстетика ленты и хайлайтов",
+    en: "Feed and highlights aesthetics",
+    ro: "Estetica feed-ului și highlights",
+  },
+  "course.prog.d4.p1": {
+    ru: "Воронка продаж в Instagram",
+    en: "Instagram sales funnel",
+    ro: "Pâlnia de vânzări în Instagram",
+  },
+  "course.prog.d4.p2": {
+    ru: "Прогрев в сторис от A до Z",
+    en: "Stories warm-up from A to Z",
+    ro: "Încălzire în story de la A la Z",
+  },
+  "course.prog.d4.p3": {
+    ru: "Скрипты переписки и закрытие сделок",
+    en: "Chat scripts and closing deals",
+    ro: "Scripturi chat și închiderea ofertelor",
+  },
+  "course.prog.d4.p4": {
+    ru: "Запуск продукта или услуги",
+    en: "Launching a product or service",
+    ro: "Lansarea unui produs sau serviciu",
+  },
+  "course.prog.d5.p1": {
+    ru: "Защита своей стратегии",
+    en: "Defending your own strategy",
+    ro: "Apărarea propriei strategii",
+  },
+  "course.prog.d5.p2": {
+    ru: "Личная обратная связь от меня",
+    en: "Personal feedback from me",
+    ro: "Feedback personal de la mine",
+  },
+  "course.prog.d5.p3": {
+    ru: "Дорожная карта на 3 месяца",
+    en: "3-month roadmap",
+    ro: "Foaie de parcurs pe 3 luni",
+  },
+  "course.prog.d5.p4": {
+    ru: "Нетворкинг и закрытый чат",
+    en: "Networking and private chat",
+    ro: "Networking și chat privat",
+  },
   // What you get
   "course.get.title": { ru: "ЧТО ПОЛУЧИШЬ", en: "WHAT YOU GET", ro: "CE PRIMEȘTI" },
   "course.get.1": { ru: "ГОТОВУЮ СТРАТЕГИЮ ПОД СВОЙ ПРОЕКТ", en: "READY STRATEGY FOR YOUR PROJECT", ro: "STRATEGIE GATA PENTRU PROIECTUL TĂU" },
@@ -359,6 +475,102 @@ const translations: Translations = {
   "course.price.vip.amount": { ru: "€1500", en: "€1500", ro: "€1500" },
   "course.price.vip.note": { ru: "ИНДИВИДУАЛЬНОЕ СОПРОВОЖДЕНИЕ", en: "PERSONAL MENTORING", ro: "MENTORAT PERSONAL" },
   "course.price.cta": { ru: "ЗАБРОНИРОВАТЬ →", en: "BOOK →", ro: "REZERVĂ →" },
+  // Includes / excludes labels
+  "course.price.includes": { ru: "ВХОДИТ В ПАКЕТ", en: "WHAT'S INCLUDED", ro: "INCLUS ÎN PACHET" },
+  "course.price.excludes": { ru: "НЕ ВХОДИТ", en: "NOT INCLUDED", ro: "NU ESTE INCLUS" },
+  // Early Bird
+  "course.price.early.inc.1": {
+    ru: "5 дней живого обучения",
+    en: "5 days of live training",
+    ro: "5 zile de training live",
+  },
+  "course.price.early.inc.2": {
+    ru: "Все рабочие материалы и шаблоны",
+    en: "All workbooks and templates",
+    ro: "Toate materialele de lucru și șabloanele",
+  },
+  "course.price.early.inc.3": {
+    ru: "Кофе-брейки и снеки на площадке",
+    en: "Coffee breaks and snacks on-site",
+    ro: "Pauze de cafea și gustări la fața locului",
+  },
+  "course.price.early.inc.4": {
+    ru: "Сертификат об окончании",
+    en: "Completion certificate",
+    ro: "Certificat de finalizare",
+  },
+  "course.price.early.exc.1": {
+    ru: "Личный разбор после курса",
+    en: "Personal review after the course",
+    ro: "Analiză personală după curs",
+  },
+  "course.price.early.exc.2": {
+    ru: "Поддержка в чате 30 дней",
+    en: "30-day chat support",
+    ro: "Suport în chat 30 de zile",
+  },
+  // Standard
+  "course.price.std.inc.1": {
+    ru: "Всё из тарифа Early Bird",
+    en: "Everything from Early Bird",
+    ro: "Tot ce e în Early Bird",
+  },
+  "course.price.std.inc.2": {
+    ru: "Поддержка в закрытом чате 30 дней",
+    en: "30-day private chat support",
+    ro: "Suport chat privat 30 de zile",
+  },
+  "course.price.std.inc.3": {
+    ru: "Запись всех дней курса",
+    en: "Recording of all course days",
+    ro: "Înregistrarea tuturor zilelor",
+  },
+  "course.price.std.inc.4": {
+    ru: "Доступ к комьюнити выпускников",
+    en: "Access to alumni community",
+    ro: "Acces la comunitatea absolvenților",
+  },
+  "course.price.std.inc.5": {
+    ru: "Бонусные мастер-классы",
+    en: "Bonus masterclasses",
+    ro: "Masterclass-uri bonus",
+  },
+  "course.price.std.exc.1": {
+    ru: "Индивидуальные сессии 1 на 1",
+    en: "Individual 1-on-1 sessions",
+    ro: "Sesiuni individuale 1 la 1",
+  },
+  // VIP
+  "course.price.vip.inc.1": {
+    ru: "Всё из тарифа Стандарт",
+    en: "Everything from Standard",
+    ro: "Tot ce e în Standard",
+  },
+  "course.price.vip.inc.2": {
+    ru: "3 личные сессии 1 на 1 со мной",
+    en: "3 personal 1-on-1 sessions with me",
+    ro: "3 sesiuni personale 1 la 1 cu mine",
+  },
+  "course.price.vip.inc.3": {
+    ru: "Персональный аудит аккаунта",
+    en: "Personal account audit",
+    ro: "Audit personal al contului",
+  },
+  "course.price.vip.inc.4": {
+    ru: "Стратегия продвижения под ключ",
+    en: "Turnkey promotion strategy",
+    ro: "Strategie de promovare la cheie",
+  },
+  "course.price.vip.inc.5": {
+    ru: "Поддержка в чате 90 дней",
+    en: "90-day chat support",
+    ro: "Suport chat 90 de zile",
+  },
+  "course.price.vip.inc.6": {
+    ru: "Лучшее место в зале и ужин со спикером",
+    en: "Best seat in the room and dinner with the speaker",
+    ro: "Cel mai bun loc în sală și cină cu vorbitorul",
+  },
   // FAQ
   "course.faq.title": { ru: "ВОПРОСЫ", en: "QUESTIONS", ro: "ÎNTREBĂRI" },
   "course.faq.1.q": { ru: "А ЕСЛИ Я НОВИЧОК?", en: "WHAT IF I'M A BEGINNER?", ro: "DAR DACĂ SUNT ÎNCEPĂTOR?" },

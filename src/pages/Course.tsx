@@ -119,33 +119,123 @@ const Who = () => {
 
 const Program = () => {
   const { t } = useLang();
+  const [openDay, setOpenDay] = useState<number | null>(0);
   const days = [
-    { t: "course.prog.d1.t", d: "course.prog.d1.d" },
-    { t: "course.prog.d2.t", d: "course.prog.d2.d" },
-    { t: "course.prog.d3.t", d: "course.prog.d3.d" },
-    { t: "course.prog.d4.t", d: "course.prog.d4.d" },
-    { t: "course.prog.d5.t", d: "course.prog.d5.d" },
+    {
+      t: "course.prog.d1.t",
+      d: "course.prog.d1.d",
+      points: [
+        "course.prog.d1.p1",
+        "course.prog.d1.p2",
+        "course.prog.d1.p3",
+        "course.prog.d1.p4",
+      ],
+    },
+    {
+      t: "course.prog.d2.t",
+      d: "course.prog.d2.d",
+      points: [
+        "course.prog.d2.p1",
+        "course.prog.d2.p2",
+        "course.prog.d2.p3",
+        "course.prog.d2.p4",
+      ],
+    },
+    {
+      t: "course.prog.d3.t",
+      d: "course.prog.d3.d",
+      points: [
+        "course.prog.d3.p1",
+        "course.prog.d3.p2",
+        "course.prog.d3.p3",
+        "course.prog.d3.p4",
+      ],
+    },
+    {
+      t: "course.prog.d4.t",
+      d: "course.prog.d4.d",
+      points: [
+        "course.prog.d4.p1",
+        "course.prog.d4.p2",
+        "course.prog.d4.p3",
+        "course.prog.d4.p4",
+      ],
+    },
+    {
+      t: "course.prog.d5.t",
+      d: "course.prog.d5.d",
+      points: [
+        "course.prog.d5.p1",
+        "course.prog.d5.p2",
+        "course.prog.d5.p3",
+        "course.prog.d5.p4",
+      ],
+    },
   ];
   return (
     <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
       <h2 className="text-brutal-lg mb-16">{t("course.prog.title")}</h2>
       <div className="space-y-0">
-        {days.map((d, i) => (
-          <motion.div
-            key={d.t}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.08 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-4 py-10 border-t border-foreground/10 items-baseline"
-          >
-            <span className="lg:col-span-1 text-brutal-sm text-accent-red">0{i + 1}</span>
-            <h3 className="lg:col-span-4 text-brutal-md">{t(d.t)}</h3>
-            <p className="lg:col-span-7 text-sm text-muted-foreground leading-relaxed">
-              {t(d.d)}
-            </p>
-          </motion.div>
-        ))}
+        {days.map((d, i) => {
+          const isOpen = openDay === i;
+          return (
+            <motion.div
+              key={d.t}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.08 }}
+              viewport={{ once: true }}
+              className="border-t border-foreground/10"
+            >
+              <button
+                onClick={() => setOpenDay(isOpen ? null : i)}
+                className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 py-8 items-baseline text-left group"
+              >
+                <span className="lg:col-span-1 text-brutal-sm text-accent-red">
+                  0{i + 1}
+                </span>
+                <h3
+                  className={`lg:col-span-5 text-brutal-md transition-colors ${
+                    isOpen ? "text-accent-red" : "group-hover:text-accent"
+                  }`}
+                >
+                  {t(d.t)}
+                </h3>
+                <p className="lg:col-span-5 text-sm text-muted-foreground leading-relaxed">
+                  {t(d.d)}
+                </p>
+                <span
+                  className={`lg:col-span-1 text-right text-brutal-md transition-transform ${
+                    isOpen ? "rotate-45" : ""
+                  }`}
+                >
+                  +
+                </span>
+              </button>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  className="overflow-hidden"
+                >
+                  <div className="lg:pl-[8.33%] pb-10">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 max-w-3xl">
+                      {d.points.map((p) => (
+                        <li
+                          key={p}
+                          className="flex items-baseline gap-3 text-sm text-foreground/80"
+                        >
+                          <span className="text-accent-red">→</span>
+                          <span>{t(p)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          );
+        })}
         <div className="border-t border-foreground/10" />
       </div>
     </section>
@@ -215,16 +305,40 @@ const Price = () => {
       amount: "course.price.early.amount",
       note: "course.price.early.note",
       featured: true,
+      includes: [
+        "course.price.early.inc.1",
+        "course.price.early.inc.2",
+        "course.price.early.inc.3",
+        "course.price.early.inc.4",
+      ],
+      excludes: ["course.price.early.exc.1", "course.price.early.exc.2"],
     },
     {
       name: "course.price.std",
       amount: "course.price.std.amount",
       note: "course.price.std.note",
+      includes: [
+        "course.price.std.inc.1",
+        "course.price.std.inc.2",
+        "course.price.std.inc.3",
+        "course.price.std.inc.4",
+        "course.price.std.inc.5",
+      ],
+      excludes: ["course.price.std.exc.1"],
     },
     {
       name: "course.price.vip",
       amount: "course.price.vip.amount",
       note: "course.price.vip.note",
+      includes: [
+        "course.price.vip.inc.1",
+        "course.price.vip.inc.2",
+        "course.price.vip.inc.3",
+        "course.price.vip.inc.4",
+        "course.price.vip.inc.5",
+        "course.price.vip.inc.6",
+      ],
+      excludes: [],
     },
   ];
   return (
@@ -246,7 +360,41 @@ const Price = () => {
           >
             <p className="text-brutal-sm text-muted-foreground mb-6">{t(tier.name)}</p>
             <p className="text-brutal-lg mb-2">{t(tier.amount)}</p>
-            <p className="text-brutal-sm text-muted-foreground mb-10">{t(tier.note)}</p>
+            <p className="text-brutal-sm text-muted-foreground mb-8">{t(tier.note)}</p>
+
+            <div className="mb-6">
+              <p className="text-brutal-sm text-accent-red mb-4">
+                {t("course.price.includes")}
+              </p>
+              <ul className="space-y-2">
+                {tier.includes.map((k) => (
+                  <li key={k} className="flex items-baseline gap-3 text-sm text-foreground/80">
+                    <span className="text-accent-red">+</span>
+                    <span>{t(k)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {tier.excludes.length > 0 && (
+              <div className="mb-10">
+                <p className="text-brutal-sm text-muted-foreground mb-4">
+                  {t("course.price.excludes")}
+                </p>
+                <ul className="space-y-2">
+                  {tier.excludes.map((k) => (
+                    <li
+                      key={k}
+                      className="flex items-baseline gap-3 text-sm text-muted-foreground/80 line-through"
+                    >
+                      <span>−</span>
+                      <span>{t(k)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <a
               href="https://wa.me/971000000000"
               target="_blank"
