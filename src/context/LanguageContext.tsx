@@ -348,6 +348,107 @@ const translations: Translations = {
     en: "Project defense, feedback, ready 3-month strategy.",
     ro: "Apărarea proiectelor, feedback, strategie gata pe 3 luni.",
   },
+  // Program details — what's inside each day
+  "course.prog.d1.p1": {
+    ru: "Анализ ниши и конкурентов",
+    en: "Niche & competitor analysis",
+    ro: "Analiza nișei și a concurenților",
+  },
+  "course.prog.d1.p2": {
+    ru: "Распаковка личного бренда / бизнеса",
+    en: "Unpacking personal brand / business",
+    ro: "Despachetarea brandului personal / afacerii",
+  },
+  "course.prog.d1.p3": {
+    ru: "Целевая аудитория и её боли",
+    en: "Target audience and their pains",
+    ro: "Audiența țintă și durerile ei",
+  },
+  "course.prog.d1.p4": {
+    ru: "Уникальное позиционирование и смыслы",
+    en: "Unique positioning and meanings",
+    ro: "Poziționare unică și semnificații",
+  },
+  "course.prog.d2.p1": {
+    ru: "Контент-план на 30 дней",
+    en: "30-day content plan",
+    ro: "Plan de conținut pe 30 de zile",
+  },
+  "course.prog.d2.p2": {
+    ru: "Рубрики, форматы, прогревы",
+    en: "Rubrics, formats, warm-ups",
+    ro: "Rubrici, formate, încălziri",
+  },
+  "course.prog.d2.p3": {
+    ru: "Сценарии рилсов, которые залетают",
+    en: "Reels scripts that go viral",
+    ro: "Scenarii de reels care devin virale",
+  },
+  "course.prog.d2.p4": {
+    ru: "Сторителлинг в сторис",
+    en: "Storytelling in stories",
+    ro: "Storytelling în story",
+  },
+  "course.prog.d3.p1": {
+    ru: "Визуальная айдентика и палитра",
+    en: "Visual identity and palette",
+    ro: "Identitate vizuală și paletă",
+  },
+  "course.prog.d3.p2": {
+    ru: "Практика съёмки на телефон",
+    en: "Phone shooting practice",
+    ro: "Practică de filmare pe telefon",
+  },
+  "course.prog.d3.p3": {
+    ru: "Монтаж рилсов в CapCut",
+    en: "Editing reels in CapCut",
+    ro: "Montaj reels în CapCut",
+  },
+  "course.prog.d3.p4": {
+    ru: "Эстетика ленты и хайлайтов",
+    en: "Feed and highlights aesthetics",
+    ro: "Estetica feed-ului și highlights",
+  },
+  "course.prog.d4.p1": {
+    ru: "Воронка продаж в Instagram",
+    en: "Instagram sales funnel",
+    ro: "Pâlnia de vânzări în Instagram",
+  },
+  "course.prog.d4.p2": {
+    ru: "Прогрев в сторис от A до Z",
+    en: "Stories warm-up from A to Z",
+    ro: "Încălzire în story de la A la Z",
+  },
+  "course.prog.d4.p3": {
+    ru: "Скрипты переписки и закрытие сделок",
+    en: "Chat scripts and closing deals",
+    ro: "Scripturi chat și închiderea ofertelor",
+  },
+  "course.prog.d4.p4": {
+    ru: "Запуск продукта или услуги",
+    en: "Launching a product or service",
+    ro: "Lansarea unui produs sau serviciu",
+  },
+  "course.prog.d5.p1": {
+    ru: "Защита своей стратегии",
+    en: "Defending your own strategy",
+    ro: "Apărarea propriei strategii",
+  },
+  "course.prog.d5.p2": {
+    ru: "Личная обратная связь от меня",
+    en: "Personal feedback from me",
+    ro: "Feedback personal de la mine",
+  },
+  "course.prog.d5.p3": {
+    ru: "Дорожная карта на 3 месяца",
+    en: "3-month roadmap",
+    ro: "Foaie de parcurs pe 3 luni",
+  },
+  "course.prog.d5.p4": {
+    ru: "Нетворкинг и закрытый чат",
+    en: "Networking and private chat",
+    ro: "Networking și chat privat",
+  },
   // What you get
   "course.get.title": { ru: "ЧТО ПОЛУЧИШЬ", en: "WHAT YOU GET", ro: "CE PRIMEȘTI" },
   "course.get.1": { ru: "ГОТОВУЮ СТРАТЕГИЮ ПОД СВОЙ ПРОЕКТ", en: "READY STRATEGY FOR YOUR PROJECT", ro: "STRATEGIE GATA PENTRU PROIECTUL TĂU" },
