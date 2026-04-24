@@ -475,6 +475,102 @@ const translations: Translations = {
   "course.price.vip.amount": { ru: "€1500", en: "€1500", ro: "€1500" },
   "course.price.vip.note": { ru: "ИНДИВИДУАЛЬНОЕ СОПРОВОЖДЕНИЕ", en: "PERSONAL MENTORING", ro: "MENTORAT PERSONAL" },
   "course.price.cta": { ru: "ЗАБРОНИРОВАТЬ →", en: "BOOK →", ro: "REZERVĂ →" },
+  // Includes / excludes labels
+  "course.price.includes": { ru: "ВХОДИТ В ПАКЕТ", en: "WHAT'S INCLUDED", ro: "INCLUS ÎN PACHET" },
+  "course.price.excludes": { ru: "НЕ ВХОДИТ", en: "NOT INCLUDED", ro: "NU ESTE INCLUS" },
+  // Early Bird
+  "course.price.early.inc.1": {
+    ru: "5 дней живого обучения",
+    en: "5 days of live training",
+    ro: "5 zile de training live",
+  },
+  "course.price.early.inc.2": {
+    ru: "Все рабочие материалы и шаблоны",
+    en: "All workbooks and templates",
+    ro: "Toate materialele de lucru și șabloanele",
+  },
+  "course.price.early.inc.3": {
+    ru: "Кофе-брейки и снеки на площадке",
+    en: "Coffee breaks and snacks on-site",
+    ro: "Pauze de cafea și gustări la fața locului",
+  },
+  "course.price.early.inc.4": {
+    ru: "Сертификат об окончании",
+    en: "Completion certificate",
+    ro: "Certificat de finalizare",
+  },
+  "course.price.early.exc.1": {
+    ru: "Личный разбор после курса",
+    en: "Personal review after the course",
+    ro: "Analiză personală după curs",
+  },
+  "course.price.early.exc.2": {
+    ru: "Поддержка в чате 30 дней",
+    en: "30-day chat support",
+    ro: "Suport în chat 30 de zile",
+  },
+  // Standard
+  "course.price.std.inc.1": {
+    ru: "Всё из тарифа Early Bird",
+    en: "Everything from Early Bird",
+    ro: "Tot ce e în Early Bird",
+  },
+  "course.price.std.inc.2": {
+    ru: "Поддержка в закрытом чате 30 дней",
+    en: "30-day private chat support",
+    ro: "Suport chat privat 30 de zile",
+  },
+  "course.price.std.inc.3": {
+    ru: "Запись всех дней курса",
+    en: "Recording of all course days",
+    ro: "Înregistrarea tuturor zilelor",
+  },
+  "course.price.std.inc.4": {
+    ru: "Доступ к комьюнити выпускников",
+    en: "Access to alumni community",
+    ro: "Acces la comunitatea absolvenților",
+  },
+  "course.price.std.inc.5": {
+    ru: "Бонусные мастер-классы",
+    en: "Bonus masterclasses",
+    ro: "Masterclass-uri bonus",
+  },
+  "course.price.std.exc.1": {
+    ru: "Индивидуальные сессии 1 на 1",
+    en: "Individual 1-on-1 sessions",
+    ro: "Sesiuni individuale 1 la 1",
+  },
+  // VIP
+  "course.price.vip.inc.1": {
+    ru: "Всё из тарифа Стандарт",
+    en: "Everything from Standard",
+    ro: "Tot ce e în Standard",
+  },
+  "course.price.vip.inc.2": {
+    ru: "3 личные сессии 1 на 1 со мной",
+    en: "3 personal 1-on-1 sessions with me",
+    ro: "3 sesiuni personale 1 la 1 cu mine",
+  },
+  "course.price.vip.inc.3": {
+    ru: "Персональный аудит аккаунта",
+    en: "Personal account audit",
+    ro: "Audit personal al contului",
+  },
+  "course.price.vip.inc.4": {
+    ru: "Стратегия продвижения под ключ",
+    en: "Turnkey promotion strategy",
+    ro: "Strategie de promovare la cheie",
+  },
+  "course.price.vip.inc.5": {
+    ru: "Поддержка в чате 90 дней",
+    en: "90-day chat support",
+    ro: "Suport chat 90 de zile",
+  },
+  "course.price.vip.inc.6": {
+    ru: "Лучшее место в зале и ужин со спикером",
+    en: "Best seat in the room and dinner with the speaker",
+    ro: "Cel mai bun loc în sală și cină cu vorbitorul",
+  },
   // FAQ
   "course.faq.title": { ru: "ВОПРОСЫ", en: "QUESTIONS", ro: "ÎNTREBĂRI" },
   "course.faq.1.q": { ru: "А ЕСЛИ Я НОВИЧОК?", en: "WHAT IF I'M A BEGINNER?", ro: "DAR DACĂ SUNT ÎNCEPĂTOR?" },
