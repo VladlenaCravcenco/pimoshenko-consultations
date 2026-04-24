@@ -119,33 +119,123 @@ const Who = () => {
 
 const Program = () => {
   const { t } = useLang();
+  const [openDay, setOpenDay] = useState<number | null>(0);
   const days = [
-    { t: "course.prog.d1.t", d: "course.prog.d1.d" },
-    { t: "course.prog.d2.t", d: "course.prog.d2.d" },
-    { t: "course.prog.d3.t", d: "course.prog.d3.d" },
-    { t: "course.prog.d4.t", d: "course.prog.d4.d" },
-    { t: "course.prog.d5.t", d: "course.prog.d5.d" },
+    {
+      t: "course.prog.d1.t",
+      d: "course.prog.d1.d",
+      points: [
+        "course.prog.d1.p1",
+        "course.prog.d1.p2",
+        "course.prog.d1.p3",
+        "course.prog.d1.p4",
+      ],
+    },
+    {
+      t: "course.prog.d2.t",
+      d: "course.prog.d2.d",
+      points: [
+        "course.prog.d2.p1",
+        "course.prog.d2.p2",
+        "course.prog.d2.p3",
+        "course.prog.d2.p4",
+      ],
+    },
+    {
+      t: "course.prog.d3.t",
+      d: "course.prog.d3.d",
+      points: [
+        "course.prog.d3.p1",
+        "course.prog.d3.p2",
+        "course.prog.d3.p3",
+        "course.prog.d3.p4",
+      ],
+    },
+    {
+      t: "course.prog.d4.t",
+      d: "course.prog.d4.d",
+      points: [
+        "course.prog.d4.p1",
+        "course.prog.d4.p2",
+        "course.prog.d4.p3",
+        "course.prog.d4.p4",
+      ],
+    },
+    {
+      t: "course.prog.d5.t",
+      d: "course.prog.d5.d",
+      points: [
+        "course.prog.d5.p1",
+        "course.prog.d5.p2",
+        "course.prog.d5.p3",
+        "course.prog.d5.p4",
+      ],
+    },
   ];
   return (
     <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
       <h2 className="text-brutal-lg mb-16">{t("course.prog.title")}</h2>
       <div className="space-y-0">
-        {days.map((d, i) => (
-          <motion.div
-            key={d.t}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.08 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-4 py-10 border-t border-foreground/10 items-baseline"
-          >
-            <span className="lg:col-span-1 text-brutal-sm text-accent-red">0{i + 1}</span>
-            <h3 className="lg:col-span-4 text-brutal-md">{t(d.t)}</h3>
-            <p className="lg:col-span-7 text-sm text-muted-foreground leading-relaxed">
-              {t(d.d)}
-            </p>
-          </motion.div>
-        ))}
+        {days.map((d, i) => {
+          const isOpen = openDay === i;
+          return (
+            <motion.div
+              key={d.t}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.08 }}
+              viewport={{ once: true }}
+              className="border-t border-foreground/10"
+            >
+              <button
+                onClick={() => setOpenDay(isOpen ? null : i)}
+                className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 py-8 items-baseline text-left group"
+              >
+                <span className="lg:col-span-1 text-brutal-sm text-accent-red">
+                  0{i + 1}
+                </span>
+                <h3
+                  className={`lg:col-span-5 text-brutal-md transition-colors ${
+                    isOpen ? "text-accent-red" : "group-hover:text-accent"
+                  }`}
+                >
+                  {t(d.t)}
+                </h3>
+                <p className="lg:col-span-5 text-sm text-muted-foreground leading-relaxed">
+                  {t(d.d)}
+                </p>
+                <span
+                  className={`lg:col-span-1 text-right text-brutal-md transition-transform ${
+                    isOpen ? "rotate-45" : ""
+                  }`}
+                >
+                  +
+                </span>
+              </button>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  className="overflow-hidden"
+                >
+                  <div className="lg:pl-[8.33%] pb-10">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 max-w-3xl">
+                      {d.points.map((p) => (
+                        <li
+                          key={p}
+                          className="flex items-baseline gap-3 text-sm text-foreground/80"
+                        >
+                          <span className="text-accent-red">→</span>
+                          <span>{t(p)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          );
+        })}
         <div className="border-t border-foreground/10" />
       </div>
     </section>
