@@ -250,6 +250,142 @@ const translations: Translations = {
     en: "BOOK →",
     ro: "REZERVĂ →",
   },
+  // Offline Course Preview (на главной)
+  "offline.label": { ru: "ОФЛАЙН-ОПЫТ", en: "OFFLINE EXPERIENCE", ro: "EXPERIENȚĂ OFFLINE" },
+  "offline.title": { ru: "ОФЛАЙН-КУРСЫ", en: "OFFLINE COURSES", ro: "CURSURI OFFLINE" },
+  "offline.desc": {
+    ru: "Уже провела офлайн-интенсивы в Кишинёве, Москве и Стамбуле. Сотни выпускников. Теперь — новый поток.",
+    en: "I've already run offline intensives in Chisinau, Moscow and Istanbul. Hundreds of graduates. Now — a new wave.",
+    ro: "Am condus deja intensive offline la Chișinău, Moscova și Istanbul. Sute de absolvenți. Acum — un nou flux.",
+  },
+  "offline.cta": { ru: "НОВЫЙ КУРС ПО SMM →", en: "NEW SMM COURSE →", ro: "NOU CURS SMM →" },
+  "offline.past": { ru: "ПРОШЛЫЕ ПОТОКИ", en: "PAST WAVES", ro: "FLUXURI ANTERIOARE" },
+  // Floating CTA
+  "float.cta": { ru: "КУРС ПО SMM", en: "SMM COURSE", ro: "CURS SMM" },
+  // Course page
+  "course.back": { ru: "← НА ГЛАВНУЮ", en: "← HOME", ro: "← ACASĂ" },
+  "course.hero.kicker": { ru: "ОФЛАЙН-ИНТЕНСИВ", en: "OFFLINE INTENSIVE", ro: "INTENSIV OFFLINE" },
+  "course.hero.title1": { ru: "SMM,", en: "SMM", ro: "SMM" },
+  "course.hero.title2": { ru: "КОТОРЫЙ", en: "THAT", ro: "CARE" },
+  "course.hero.title3": { ru: "ПРОДАЁТ", en: "SELLS", ro: "VINDE" },
+  "course.hero.sub": {
+    ru: "5 ДНЕЙ. ЖИВАЯ ГРУППА. РЕАЛЬНЫЕ КЕЙСЫ.",
+    en: "5 DAYS. LIVE GROUP. REAL CASES.",
+    ro: "5 ZILE. GRUP LIVE. CAZURI REALE.",
+  },
+  "course.hero.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО →", en: "RESERVE A SEAT →", ro: "REZERVĂ UN LOC →" },
+  "course.hero.spots": { ru: "ОСТАЛОСЬ 12 МЕСТ", en: "12 SEATS LEFT", ro: "AU RĂMAS 12 LOCURI" },
+  // Pain
+  "course.pain.title": { ru: "ЕСЛИ ЭТО ПРО ТЕБЯ", en: "IF THIS IS YOU", ro: "DACĂ ASTA EȘTI TU" },
+  "course.pain.1": { ru: "ПОСТИШЬ — ТИШИНА В ОТВЕТ", en: "YOU POST — SILENCE BACK", ro: "POSTEZI — TĂCERE" },
+  "course.pain.2": { ru: "НЕ ПОНИМАЕШЬ, ЧТО СНИМАТЬ", en: "DON'T KNOW WHAT TO SHOOT", ro: "NU ȘTII CE SĂ FILMEZI" },
+  "course.pain.3": { ru: "ХОЧЕШЬ РАБОТАТЬ С БРЕНДАМИ", en: "WANT TO WORK WITH BRANDS", ro: "VREI SĂ LUCREZI CU BRANDURI" },
+  "course.pain.4": { ru: "ИЩЕШЬ НОВУЮ ПРОФЕССИЮ", en: "LOOKING FOR A NEW CAREER", ro: "CAUȚI O NOUĂ CARIERĂ" },
+  // For who
+  "course.who.title": { ru: "ДЛЯ КОГО", en: "WHO IT'S FOR", ro: "PENTRU CINE" },
+  "course.who.1.t": { ru: "ЭКСПЕРТЫ", en: "EXPERTS", ro: "EXPERȚI" },
+  "course.who.1.d": {
+    ru: "Хочешь упаковать себя как личный бренд и продавать через Instagram.",
+    en: "Want to package yourself as a personal brand and sell through Instagram.",
+    ro: "Vrei să te împachetezi ca brand personal și să vinzi prin Instagram.",
+  },
+  "course.who.2.t": { ru: "ВЛАДЕЛЬЦЫ БИЗНЕСА", en: "BUSINESS OWNERS", ro: "PROPRIETARI DE AFACERI" },
+  "course.who.2.d": {
+    ru: "Хочешь сам управлять контентом, а не зависеть от агентств.",
+    en: "Want to run your own content instead of relying on agencies.",
+    ro: "Vrei să-ți gestionezi singur conținutul, fără agenții.",
+  },
+  "course.who.3.t": { ru: "НАЧИНАЮЩИЕ SMM", en: "BEGINNER SMM", ro: "ÎNCEPĂTORI SMM" },
+  "course.who.3.d": {
+    ru: "Хочешь войти в профессию и сразу работать с реальными клиентами.",
+    en: "Want to enter the profession and start with real clients right away.",
+    ro: "Vrei să intri în profesie și să lucrezi imediat cu clienți reali.",
+  },
+  // Program
+  "course.prog.title": { ru: "ПРОГРАММА · 5 ДНЕЙ", en: "PROGRAM · 5 DAYS", ro: "PROGRAM · 5 ZILE" },
+  "course.prog.d1.t": { ru: "ДЕНЬ 1 · СТРАТЕГИЯ", en: "DAY 1 · STRATEGY", ro: "ZIUA 1 · STRATEGIE" },
+  "course.prog.d1.d": {
+    ru: "Позиционирование, аудитория, ниша, точки роста. Разбираем твой проект.",
+    en: "Positioning, audience, niche, growth points. We break down your project.",
+    ro: "Poziționare, audiență, nișă, puncte de creștere. Analizăm proiectul tău.",
+  },
+  "course.prog.d2.t": { ru: "ДЕНЬ 2 · КОНТЕНТ", en: "DAY 2 · CONTENT", ro: "ZIUA 2 · CONȚINUT" },
+  "course.prog.d2.d": {
+    ru: "Контент-план, структура, форматы, рилсы, сторис. Что снимать каждый день.",
+    en: "Content plan, structure, formats, reels, stories. What to shoot every day.",
+    ro: "Plan de conținut, structură, formate, reels, story. Ce să filmezi zilnic.",
+  },
+  "course.prog.d3.t": { ru: "ДЕНЬ 3 · ВИЗУАЛ", en: "DAY 3 · VISUAL", ro: "ZIUA 3 · VIZUAL" },
+  "course.prog.d3.d": {
+    ru: "Визуальная система, эстетика, съёмка, монтаж. Как держать стиль.",
+    en: "Visual system, aesthetics, shooting, editing. How to keep the style.",
+    ro: "Sistem vizual, estetică, filmare, montaj. Cum să menții stilul.",
+  },
+  "course.prog.d4.t": { ru: "ДЕНЬ 4 · ПРОДАЖИ", en: "DAY 4 · SALES", ro: "ZIUA 4 · VÂNZĂRI" },
+  "course.prog.d4.d": {
+    ru: "Воронка, прогревы, конверсия, работа с заявками. Превращаем подписчиков в клиентов.",
+    en: "Funnel, warm-ups, conversion, lead handling. Turning followers into clients.",
+    ro: "Pâlnie, încălzire, conversie, lead-uri. Transformăm urmăritorii în clienți.",
+  },
+  "course.prog.d5.t": { ru: "ДЕНЬ 5 · ПРАКТИКА", en: "DAY 5 · PRACTICE", ro: "ZIUA 5 · PRACTICĂ" },
+  "course.prog.d5.d": {
+    ru: "Защита проектов, обратная связь, готовая стратегия на 3 месяца.",
+    en: "Project defense, feedback, ready 3-month strategy.",
+    ro: "Apărarea proiectelor, feedback, strategie gata pe 3 luni.",
+  },
+  // What you get
+  "course.get.title": { ru: "ЧТО ПОЛУЧИШЬ", en: "WHAT YOU GET", ro: "CE PRIMEȘTI" },
+  "course.get.1": { ru: "ГОТОВУЮ СТРАТЕГИЮ ПОД СВОЙ ПРОЕКТ", en: "READY STRATEGY FOR YOUR PROJECT", ro: "STRATEGIE GATA PENTRU PROIECTUL TĂU" },
+  "course.get.2": { ru: "КОНТЕНТ-ПЛАН НА 90 ДНЕЙ", en: "90-DAY CONTENT PLAN", ro: "PLAN DE CONȚINUT 90 ZILE" },
+  "course.get.3": { ru: "ШАБЛОНЫ РИЛСОВ И СТОРИС", en: "REELS & STORIES TEMPLATES", ro: "ȘABLOANE REELS ȘI STORY" },
+  "course.get.4": { ru: "ДОСТУП К ЗАКРЫТОМУ ЧАТУ ВЫПУСКНИКОВ", en: "ACCESS TO PRIVATE ALUMNI CHAT", ro: "ACCES LA CHAT-UL PRIVAT AL ABSOLVENȚILOR" },
+  "course.get.5": { ru: "СЕРТИФИКАТ", en: "CERTIFICATE", ro: "CERTIFICAT" },
+  "course.get.6": { ru: "ПОДДЕРЖКУ 30 ДНЕЙ ПОСЛЕ КУРСА", en: "30 DAYS POST-COURSE SUPPORT", ro: "30 ZILE SUPORT POST-CURS" },
+  // Format
+  "course.fmt.title": { ru: "ФОРМАТ", en: "FORMAT", ro: "FORMAT" },
+  "course.fmt.dates": { ru: "ДАТЫ УТОЧНЯЮТСЯ", en: "DATES TBA", ro: "DATELE URMEAZĂ" },
+  "course.fmt.place": { ru: "ОФЛАЙН · КИШИНЁВ", en: "OFFLINE · CHISINAU", ro: "OFFLINE · CHIȘINĂU" },
+  "course.fmt.spots": { ru: "ТОЛЬКО 20 МЕСТ", en: "ONLY 20 SEATS", ro: "DOAR 20 LOCURI" },
+  "course.fmt.lang": { ru: "RU · RO", en: "RU · RO", ro: "RU · RO" },
+  // Price
+  "course.price.title": { ru: "СТОИМОСТЬ", en: "PRICE", ro: "PREȚ" },
+  "course.price.early": { ru: "РАННЯЯ ПТАШКА", en: "EARLY BIRD", ro: "EARLY BIRD" },
+  "course.price.early.amount": { ru: "€450", en: "€450", ro: "€450" },
+  "course.price.early.note": { ru: "ДО КОНЦА МЕСЯЦА", en: "TILL END OF MONTH", ro: "PÂNĂ LA SFÂRȘITUL LUNII" },
+  "course.price.std": { ru: "СТАНДАРТ", en: "STANDARD", ro: "STANDARD" },
+  "course.price.std.amount": { ru: "€650", en: "€650", ro: "€650" },
+  "course.price.std.note": { ru: "ОБЫЧНАЯ ЦЕНА", en: "REGULAR PRICE", ro: "PREȚ OBIȘNUIT" },
+  "course.price.vip": { ru: "VIP · 1 НА 1", en: "VIP · 1 ON 1", ro: "VIP · 1 LA 1" },
+  "course.price.vip.amount": { ru: "€1500", en: "€1500", ro: "€1500" },
+  "course.price.vip.note": { ru: "ИНДИВИДУАЛЬНОЕ СОПРОВОЖДЕНИЕ", en: "PERSONAL MENTORING", ro: "MENTORAT PERSONAL" },
+  "course.price.cta": { ru: "ЗАБРОНИРОВАТЬ →", en: "BOOK →", ro: "REZERVĂ →" },
+  // FAQ
+  "course.faq.title": { ru: "ВОПРОСЫ", en: "QUESTIONS", ro: "ÎNTREBĂRI" },
+  "course.faq.1.q": { ru: "А ЕСЛИ Я НОВИЧОК?", en: "WHAT IF I'M A BEGINNER?", ro: "DAR DACĂ SUNT ÎNCEPĂTOR?" },
+  "course.faq.1.a": {
+    ru: "Курс рассчитан на любой уровень. Начнём с базы и дойдём до продаж.",
+    en: "The course works for any level. We start from the basics and reach sales.",
+    ro: "Cursul e potrivit pentru orice nivel. Începem cu bazele și ajungem la vânzări.",
+  },
+  "course.faq.2.q": { ru: "ЧТО ЕСЛИ Я ПРОПУЩУ ДЕНЬ?", en: "WHAT IF I MISS A DAY?", ro: "DACĂ PIERD O ZI?" },
+  "course.faq.2.a": {
+    ru: "Все материалы остаются с тобой. Запись и поддержка — внутри.",
+    en: "All materials stay with you. Recording and support — inside.",
+    ro: "Toate materialele rămân cu tine. Înregistrare și suport — incluse.",
+  },
+  "course.faq.3.q": { ru: "ВЕРНЁТЕ ДЕНЬГИ?", en: "REFUND?", ro: "RAMBURSARE?" },
+  "course.faq.3.a": {
+    ru: "Возврат брони невозможен, но место можно передать другому участнику.",
+    en: "Booking is non-refundable, but you can transfer your seat.",
+    ro: "Rezervarea nu se rambursează, dar poți transfera locul.",
+  },
+  // Final
+  "course.final.title": {
+    ru: "МЕСТА ОГРАНИЧЕНЫ",
+    en: "LIMITED SEATS",
+    ro: "LOCURI LIMITATE",
+  },
+  "course.final.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО →", en: "RESERVE SEAT →", ro: "REZERVĂ LOCUL →" },
 };
 
 const LanguageContext = createContext<{

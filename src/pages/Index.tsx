@@ -1,5 +1,6 @@
 import { LanguageProvider } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import FloatingCourseCTA from "@/components/FloatingCourseCTA";
 import SceneImpact from "@/components/scenes/SceneImpact";
 import SceneDisruption from "@/components/scenes/SceneDisruption";
 import SceneRawFacts from "@/components/scenes/SceneRawFacts";
@@ -11,6 +12,7 @@ import SceneCases from "@/components/scenes/SceneCases";
 import SceneProof from "@/components/scenes/SceneProof";
 import SceneVoices from "@/components/scenes/SceneVoices";
 import SceneFormat from "@/components/scenes/SceneFormat";
+import SceneOfflinePreview from "@/components/scenes/SceneOfflinePreview";
 
 import ScenePrice from "@/components/scenes/ScenePrice";
 import SceneBooking from "@/components/scenes/SceneBooking";
@@ -21,6 +23,7 @@ const Index = () => {
   return (
     <LanguageProvider>
       <LanguageSwitcher />
+      <FloatingCourseCTA />
       <main className="bg-background">
         <SceneImpact />
         <SceneDisruption />
@@ -32,6 +35,7 @@ const Index = () => {
         <SceneCases />
         <SceneProof />
         <SceneVoices />
+        <SceneOfflinePreview />
         <SceneFormat />
         
         <ScenePrice />
