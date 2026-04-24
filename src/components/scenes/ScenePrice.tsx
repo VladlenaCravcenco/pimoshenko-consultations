@@ -16,8 +16,18 @@ const ScenePrice = () => {
 
   return (
     <section className="scene py-24 lg:py-40 px-6 lg:px-16">
-      {/* Price block */}
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 mb-24 lg:mb-40">
+      {/* Consultation block */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-brutal-md text-foreground mb-12"
+      >
+        {t("price.consultation")}
+      </motion.p>
+
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 mb-24 lg:mb-32">
         {/* Full price */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -28,7 +38,7 @@ const ScenePrice = () => {
           <p className="text-brutal-sm text-muted-foreground mb-4">
             {t("price.full")}
           </p>
-          <p className="text-brutal-xl text-foreground">€500</p>
+          <p className="text-brutal-xl text-foreground">€200</p>
         </motion.div>
 
         {/* Booking price */}
@@ -39,10 +49,33 @@ const ScenePrice = () => {
           viewport={{ once: true }}
         >
           <p className="text-brutal-sm text-accent-red mb-4">{t("price.booking")}</p>
-          <p className="text-brutal-xl text-accent-red">€200</p>
+          <p className="text-brutal-xl text-accent-red">€20</p>
           <p className="text-brutal-sm text-muted-foreground mt-4">{t("price.remainder")}</p>
         </motion.div>
       </div>
+
+      {/* Corporate training block */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="border-t border-foreground/10 pt-16 lg:pt-20 mb-24 lg:mb-40"
+      >
+        <p className="text-brutal-md text-foreground mb-8">{t("price.training")}</p>
+        <p className="text-brutal-xl text-accent-red mb-6">€1000</p>
+        <p className="text-brutal-sm text-muted-foreground max-w-[600px] mb-8 leading-relaxed">
+          {t("price.training.desc")}
+        </p>
+        <a
+          href="https://wa.me/971000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-link text-brutal-sm text-foreground hover:text-accent-red transition-colors"
+        >
+          {t("price.training.cta")}
+        </a>
+      </motion.div>
 
       {/* What's included */}
       <motion.div
