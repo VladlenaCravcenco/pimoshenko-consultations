@@ -9,6 +9,7 @@ const cases = [
     brand: "cases.1.brand",
     type: "cases.1.type",
     result: "cases.1.result",
+    desc: "cases.1.desc",
     reels: [
       { id: "r1-1", thumbnail: "", videoUrl: "" },
       { id: "r1-2", thumbnail: "", videoUrl: "" },
@@ -22,6 +23,7 @@ const cases = [
     brand: "cases.2.brand",
     type: "cases.2.type",
     result: "cases.2.result",
+    desc: "cases.2.desc",
     reels: [
       { id: "r2-1", thumbnail: "", videoUrl: "" },
       { id: "r2-2", thumbnail: "", videoUrl: "" },
@@ -34,6 +36,7 @@ const cases = [
     brand: "cases.3.brand",
     type: "cases.3.type",
     result: "cases.3.result",
+    desc: "cases.3.desc",
     reels: [
       { id: "r3-1", thumbnail: "", videoUrl: "" },
       { id: "r3-2", thumbnail: "", videoUrl: "" },
@@ -48,6 +51,7 @@ const cases = [
     brand: "cases.4.brand",
     type: "cases.4.type",
     result: "cases.4.result",
+    desc: "cases.4.desc",
     reels: [
       { id: "r4-1", thumbnail: "", videoUrl: "" },
       { id: "r4-2", thumbnail: "", videoUrl: "" },
@@ -263,6 +267,10 @@ const SceneCases = () => {
                     className="overflow-hidden"
                   >
                     <div className="pb-10 lg:pb-16">
+                      {/* Description */}
+                      <p className="text-brutal-sm text-muted-foreground leading-relaxed max-w-[800px] mb-8 lg:mb-12">
+                        {t(c.desc)}
+                      </p>
                       {/* Desktop: horizontal carousel with gap */}
                       {!isMobile ? (
                         <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
