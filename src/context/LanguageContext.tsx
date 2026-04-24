@@ -230,7 +230,7 @@ const translations: Translations = {
   "booking.next": { ru: "ДАЛЕЕ", en: "NEXT", ro: "URMĂTORUL" },
   "booking.date": { ru: "ВЫБЕРИ ДЕНЬ", en: "CHOOSE A DAY", ro: "ALEGE O ZI" },
   "booking.time": { ru: "ВЫБЕРИ ВРЕМЯ", en: "CHOOSE TIME", ro: "ALEGE ORA" },
-  "booking.pay": { ru: "ОПЛАТИТЬ БРОНЬ €200 →", en: "PAY BOOKING €200 →", ro: "PLĂTEȘTE REZERVAREA €200 →" },
+  "booking.pay": { ru: "ОПЛАТИТЬ БРОНЬ €20 →", en: "PAY BOOKING €20 →", ro: "PLĂTEȘTE REZERVAREA €20 →" },
   "booking.placeholder.name": { ru: "Как тебя зовут?", en: "What's your name?", ro: "Cum te cheamă?" },
   "booking.placeholder.ig": { ru: "@username", en: "@username", ro: "@username" },
   "booking.placeholder.biz": { ru: "Чем занимаешься?", en: "What do you do?", ro: "Cu ce te ocupi?" },
