@@ -305,16 +305,40 @@ const Price = () => {
       amount: "course.price.early.amount",
       note: "course.price.early.note",
       featured: true,
+      includes: [
+        "course.price.early.inc.1",
+        "course.price.early.inc.2",
+        "course.price.early.inc.3",
+        "course.price.early.inc.4",
+      ],
+      excludes: ["course.price.early.exc.1", "course.price.early.exc.2"],
     },
     {
       name: "course.price.std",
       amount: "course.price.std.amount",
       note: "course.price.std.note",
+      includes: [
+        "course.price.std.inc.1",
+        "course.price.std.inc.2",
+        "course.price.std.inc.3",
+        "course.price.std.inc.4",
+        "course.price.std.inc.5",
+      ],
+      excludes: ["course.price.std.exc.1"],
     },
     {
       name: "course.price.vip",
       amount: "course.price.vip.amount",
       note: "course.price.vip.note",
+      includes: [
+        "course.price.vip.inc.1",
+        "course.price.vip.inc.2",
+        "course.price.vip.inc.3",
+        "course.price.vip.inc.4",
+        "course.price.vip.inc.5",
+        "course.price.vip.inc.6",
+      ],
+      excludes: [],
     },
   ];
   return (
@@ -336,7 +360,41 @@ const Price = () => {
           >
             <p className="text-brutal-sm text-muted-foreground mb-6">{t(tier.name)}</p>
             <p className="text-brutal-lg mb-2">{t(tier.amount)}</p>
-            <p className="text-brutal-sm text-muted-foreground mb-10">{t(tier.note)}</p>
+            <p className="text-brutal-sm text-muted-foreground mb-8">{t(tier.note)}</p>
+
+            <div className="mb-6">
+              <p className="text-brutal-sm text-accent-red mb-4">
+                {t("course.price.includes")}
+              </p>
+              <ul className="space-y-2">
+                {tier.includes.map((k) => (
+                  <li key={k} className="flex items-baseline gap-3 text-sm text-foreground/80">
+                    <span className="text-accent-red">+</span>
+                    <span>{t(k)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {tier.excludes.length > 0 && (
+              <div className="mb-10">
+                <p className="text-brutal-sm text-muted-foreground mb-4">
+                  {t("course.price.excludes")}
+                </p>
+                <ul className="space-y-2">
+                  {tier.excludes.map((k) => (
+                    <li
+                      key={k}
+                      className="flex items-baseline gap-3 text-sm text-muted-foreground/80 line-through"
+                    >
+                      <span>−</span>
+                      <span>{t(k)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <a
               href="https://wa.me/971000000000"
               target="_blank"
