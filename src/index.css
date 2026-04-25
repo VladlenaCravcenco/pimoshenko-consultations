@@ -75,7 +75,7 @@
 
 @layer components {
   .scene {
-    @apply relative w-screen overflow-hidden;
+    @apply relative w-full overflow-hidden;
   }
 
   .scene-full {
@@ -85,27 +85,33 @@
   .text-brutal {
     font-family: 'Space Grotesk', sans-serif;
     @apply font-bold uppercase tracking-tighter leading-none;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .text-brutal-xl {
     @apply text-brutal;
-    font-size: clamp(3rem, 15vw, 12rem);
+    font-size: clamp(2rem, 12vw, 12rem);
+    line-height: 0.85;
   }
 
   .text-brutal-lg {
     @apply text-brutal;
-    font-size: clamp(2rem, 8vw, 6rem);
+    font-size: clamp(1.5rem, 7vw, 6rem);
+    line-height: 0.9;
   }
 
   .text-brutal-md {
     @apply text-brutal;
-    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-size: clamp(1.2rem, 4vw, 3.5rem);
+    line-height: 0.95;
   }
 
   .text-brutal-sm {
     @apply uppercase tracking-widest font-medium;
     font-size: clamp(0.65rem, 1.2vw, 0.85rem);
     letter-spacing: 0.2em;
+    word-break: break-word;
   }
 
   .text-accent-red {
@@ -122,6 +128,7 @@
 
   .cta-link {
     @apply relative inline-block cursor-pointer;
+    word-break: break-word;
   }
 
   .cta-link::after {

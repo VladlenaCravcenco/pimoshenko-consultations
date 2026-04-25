@@ -13,7 +13,7 @@ const SceneDisruption = () => {
   });
 
   return (
-    <section ref={ref} className="scene-full flex flex-col justify-center px-6 lg:px-16 py-32 gap-24 lg:gap-32">
+    <section ref={ref} className="scene-full flex flex-col justify-center px-6 lg:px-16 py-20 lg:py-32 gap-16 lg:gap-32">
       {lines.map((key, i) => {
         const start = i * 0.2;
         const end = start + 0.15;
@@ -46,7 +46,7 @@ const LineReveal = ({
   return (
     <motion.p
       style={{ opacity, x }}
-      className={`text-brutal-lg ${isLast ? "text-accent-red" : "text-foreground"} max-w-[90vw]`}
+      className={`text-brutal-lg ${isLast ? "text-accent-red" : "text-foreground"} max-w-full lg:max-w-[95%] break-words`}
     >
       {children}
     </motion.p>

@@ -13,7 +13,7 @@ const SceneRawFacts = () => {
   const { t } = useLang();
 
   return (
-    <section className="scene py-24 lg:py-40 px-6 lg:px-16">
+    <section className="scene py-16 lg:py-40 px-6 lg:px-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         {facts.map((fact, i) => (
           <motion.div
@@ -22,17 +22,17 @@ const SceneRawFacts = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="border-t border-foreground/10 py-12 lg:py-20 lg:pr-16 group"
+            className="border-t border-foreground/10 py-10 lg:py-20 lg:pr-8 xl:lg:pr-16 group"
           >
-            <div className="flex items-baseline gap-6 mb-4">
-              <span className={`text-brutal-xl ${i % 2 === 0 ? "text-accent-red" : "text-foreground"}`}>
+            <div className="flex items-baseline gap-4 lg:gap-6 mb-4">
+              <span className={`text-brutal-xl break-words ${i % 2 === 0 ? "text-accent-red" : "text-foreground"}`}>
                 {fact.number}
               </span>
             </div>
-            <span className="text-brutal-sm text-muted-foreground block mb-4">
+            <span className="text-brutal-sm text-muted-foreground block mb-3 lg:mb-4">
               {t(fact.label)}
             </span>
-            <p className="text-sm text-muted-foreground/70 leading-relaxed max-w-md" style={{ fontFamily: "'Space Grotesk', sans-serif", textTransform: "none", letterSpacing: "0" }}>
+            <p className="text-xs lg:text-sm text-muted-foreground/70 leading-relaxed max-w-md" style={{ fontFamily: "'Space Grotesk', sans-serif", textTransform: "none", letterSpacing: "0" }}>
               {t(fact.desc)}
             </p>
           </motion.div>
