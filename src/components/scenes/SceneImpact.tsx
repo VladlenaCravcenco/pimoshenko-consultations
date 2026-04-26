@@ -81,7 +81,7 @@ const SceneImpact = () => {
           src={heroImg}
           alt=""
           style={{ scale: imgScale }}
-          className="w-full h-full object-cover object-bottom lg:object-top"
+          className="w-full h-full object-cover object-center lg:object-top"
           width={1200}
           height={1600}
         />
