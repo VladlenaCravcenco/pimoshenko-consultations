@@ -108,7 +108,7 @@ const ReelCard = ({
     <div
       ref={cardRef}
       className={`relative flex-shrink-0 cursor-pointer overflow-hidden transition-all duration-500 ${
-        isMobile ? "w-[70vw] snap-center" : "w-[180px] lg:w-[220px]"
+        isMobile ? "w-[80vw] snap-center sm:w-[70vw]" : "w-[180px] lg:w-[220px]"
       }`}
       style={{ aspectRatio: "9/16" }}
       onMouseEnter={() => !isMobile && onActivate()}
@@ -221,25 +221,30 @@ const SceneCases = () => {
               {/* Case header — clickable */}
               <div
                 onClick={() => toggleCase(c.key)}
-                className="py-10 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-baseline group cursor-pointer"
+                className="py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-8 lg:items-baseline group cursor-pointer"
               >
-                <div className="lg:col-span-1">
+                <div className="lg:col-span-1 hidden lg:block">
                   <span className="text-brutal-sm text-muted-foreground">
                     0{i + 1}
                   </span>
                 </div>
-                <div className="lg:col-span-3 flex items-center gap-3">
-                  <h3
-                    className={`text-brutal-md transition-colors duration-300 ${
-                      isOpen ? "text-accent-red" : "text-foreground group-hover:text-accent"
-                    }`}
-                  >
-                    {t(c.brand)}
-                  </h3>
+                <div className="lg:col-span-3 flex items-start gap-3">
+                  <span className="text-brutal-sm text-muted-foreground lg:hidden flex-shrink-0">
+                    0{i + 1}
+                  </span>
+                  <div className="flex-1">
+                    <h3
+                      className={`text-brutal-md lg:text-brutal-md transition-colors duration-300 leading-tight ${
+                        isOpen ? "text-accent-red" : "text-foreground group-hover:text-accent"
+                      }`}
+                    >
+                      {t(c.brand)}
+                    </h3>
+                  </div>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-brutal-md text-muted-foreground"
+                    className="text-brutal-md text-muted-foreground flex-shrink-0"
                   >
                     +
                   </motion.span>
@@ -266,9 +271,9 @@ const SceneCases = () => {
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-10 lg:pb-16">
+                    <div className="pb-8 lg:pb-16">
                       {/* Description */}
-                      <p className="text-brutal-sm text-muted-foreground leading-relaxed max-w-[800px] mb-8 lg:mb-12">
+                      <p className="text-brutal-sm text-muted-foreground leading-relaxed mb-6 lg:mb-12">
                         {t(c.desc)}
                       </p>
                       {/* Desktop: horizontal carousel with gap */}
