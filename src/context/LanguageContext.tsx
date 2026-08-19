@@ -292,10 +292,10 @@ const translations: Translations = {
   "course.hero.spots": { ru: "Осталось 12 мест", en: "12 seats left", ro: "Au rămas 12 locuri" },
   // Pain
   "course.pain.title": { ru: "ЕСЛИ ЭТО ПРО ТЕБЯ", en: "IF THIS IS YOU", ro: "DACĂ ASTA EȘTI TU" },
-  "course.pain.1": { ru: "ПОСТИШЬ — ТИШИНА В ОТВЕТ", en: "YOU POST — SILENCE BACK", ro: "POSTEZI — TĂCERE" },
-  "course.pain.2": { ru: "НЕ ПОНИМАЕШЬ, ЧТО СНИМАТЬ", en: "DON'T KNOW WHAT TO SHOOT", ro: "NU ȘTII CE SĂ FILMEZI" },
-  "course.pain.3": { ru: "ХОЧЕШЬ РАБОТАТЬ С БРЕНДАМИ", en: "WANT TO WORK WITH BRANDS", ro: "VREI SĂ LUCREZI CU BRANDURI" },
-  "course.pain.4": { ru: "ИЩЕШЬ НОВУЮ ПРОФЕССИЮ", en: "LOOKING FOR A NEW CAREER", ro: "CAUȚI O NOUĂ CARIERĂ" },
+  "course.pain.1": { ru: "НЕ ЗНАЮ КУДА РАСТИ ДАЛЬШЕ", en: "I DON'T KNOW WHERE TO GROW NEXT", ro: "NU ȘTIU ÎN COTRO SĂ MĂ DEZVOLTURMAI DEPARTE" },
+  "course.pain.2": { ru: "Я УПЕРСЯ В ПОТОЛОК", en: "I HIT A CEILING", ro: "AM AJUNS LA TAVAN" },
+  "course.pain.3": { ru: "НЕ ПОНИМАЮ, КАК ПОВЫСИТЬ ЧЕК", en: "I DON'T UNDERSTAND HOW TO INCREASE THE CHECK", ro: "NU ÎNȚLEG CUM SĂ CREȘT CHECK-UL" },
+  "course.pain.4": { ru: "Я ВЫГОРЕЛА В СВОЕЙ РАБОТЕ", en: "I BURNED OUT IN MY WORK", ro: "AM ARS ÎN MUNCĂ" },
   // For who
   "course.who.title": { ru: "ДЛЯ КОГО", en: "WHO IT'S FOR", ro: "PENTRU CINE" },
   "course.who.1.t": { ru: "ЭКСПЕРТЫ", en: "EXPERTS", ro: "EXPERȚI" },
