@@ -336,18 +336,30 @@ const WhatYouGet = () => {
 const Format = () => {
   const { t } = useLang();
   const items = [
-    { l: "DATES", v: "course.fmt.dates" },
-    { l: "PLACE", v: "course.fmt.place" },
-    { l: "SEATS", v: "course.fmt.spots" },
-    { l: "LANG", v: "course.fmt.lang" },
+    { label: "ДАТЫ", value: "7–11 сентября" },
+    { label: "ПРАКТИЧЕСКИЕ ДНИ", value: "12–13–14" },
+    { label: "ВЫПУСКНОЙ", value: "15 сентября · PARTY" },
+    { label: "БРОНЬ КУРСА", value: "250€" },
   ];
+
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
       <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.fmt.title")}</h2>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
-        {items.map((it) => (
-          <div key={it.l} className="border-t border-foreground/10 pt-4 lg:pt-6">
-            <p className="text-brutal-md break-words">{t(it.v)}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-5xl">
+        {items.map((it, index) => (
+          <div
+            key={it.label}
+            className={`border border-foreground/10 bg-background/40 p-5 lg:p-6 ${
+              index === 3 ? "md:col-span-2" : ""
+            }`}
+          >
+            <p className="text-xs lg:text-sm uppercase tracking-[0.18em] text-accent-red mb-3">
+              {it.label}
+            </p>
+            <p className="text-2xl lg:text-4xl font-black uppercase tracking-[-0.06em] leading-none">
+              {it.value}
+            </p>
           </div>
         ))}
       </div>
@@ -479,6 +491,12 @@ const Price = () => {
           </motion.div>
         ))}
       </div>
+
+      <div className="mt-16 lg:mt-20 border-t border-foreground/10 pt-8 lg:pt-10">
+        <p className="max-w-5xl text-2xl lg:text-4xl xl:text-5xl font-black uppercase tracking-[-0.06em] leading-[1.02]">
+          После окончания курса вы выйдете не только с <span className="text-accent-red">дипломом</span>, но и с готовым набором инструментов для <span className="text-accent-red">старта в SMM</span>
+        </p>
+      </div>
     </section>
   );
 };
@@ -532,21 +550,23 @@ const FAQ = () => {
 
 const Final = () => {
   const { t } = useLang();
+
   return (
     <section className="scene-full flex flex-col justify-center items-center text-center px-6 lg:px-16 border-t border-foreground/10">
       <motion.h2
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="text-brutal-xl text-accent-red mb-12"
+        className="text-brutal-xl text-accent-red mb-10"
       >
         {t("course.final.title")}
       </motion.h2>
+
       <a
         href="#price"
-        className="inline-block bg-accent text-accent-foreground px-12 py-6 text-brutal-md hover:bg-foreground hover:text-background transition-colors"
+        className="inline-flex items-center justify-center bg-accent text-accent-foreground px-8 lg:px-12 py-5 lg:py-6 text-xl lg:text-3xl font-black uppercase tracking-[-0.06em] hover:bg-foreground hover:text-background transition-colors"
       >
-        {t("course.final.cta")}
+        Бронь курса · 250€ →
       </a>
     </section>
   );
