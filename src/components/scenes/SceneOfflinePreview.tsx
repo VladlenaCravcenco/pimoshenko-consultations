@@ -15,14 +15,6 @@ const SceneOfflinePreview = () => {
     <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         <div className="lg:col-span-5">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-brutal-sm text-accent-red mb-6"
-          >
-            {t("offline.label")}
-          </motion.p>
           <motion.h2
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,9 +42,6 @@ const SceneOfflinePreview = () => {
         </div>
 
         <div className="lg:col-span-7">
-          <p className="text-brutal-sm text-muted-foreground mb-8">
-            {t("offline.past")}
-          </p>
           <div className="space-y-0">
             {pastWaves.map((w, i) => (
               <motion.div
@@ -63,14 +52,11 @@ const SceneOfflinePreview = () => {
                 viewport={{ once: true }}
                 className="grid grid-cols-12 gap-4 py-6 border-t border-foreground/10 items-baseline"
               >
-                <span className="col-span-1 text-brutal-sm text-muted-foreground">
-                  0{i + 1}
-                </span>
                 <span className="col-span-5 text-brutal-md">{w.name}</span>
                 <span className="col-span-3 text-brutal-sm text-muted-foreground">
                   {w.year}
                 </span>
-                <span className="col-span-3 text-right text-brutal-sm text-accent-red">
+                <span className="col-span-4 text-right text-brutal-sm text-accent-red">
                   {w.count}
                 </span>
               </motion.div>
@@ -84,9 +70,6 @@ const SceneOfflinePreview = () => {
               viewport={{ once: true }}
               className="grid grid-cols-12 gap-4 py-6 border-t border-foreground/10 items-baseline bg-accent/5"
             >
-              <span className="col-span-1 text-brutal-sm text-accent-red">
-                04
-              </span>
               <span className="col-span-4 text-brutal-md text-accent-red">
                 {t("offline.wave.4.name")}
               </span>
@@ -98,7 +81,7 @@ const SceneOfflinePreview = () => {
               </span>
               <Link
                 to="/course"
-                className="col-span-3 text-right text-brutal-sm text-accent hover:text-foreground transition-colors"
+                className="col-span-4 text-right text-brutal-sm text-accent hover:text-foreground transition-colors"
               >
                 {t("offline.wave.4.more")}
               </Link>

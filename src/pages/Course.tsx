@@ -11,17 +11,10 @@ const Hero = () => {
     <section className="scene-full flex flex-col justify-center px-6 lg:px-16 pt-20 lg:pt-32 pb-16 lg:pb-20 relative">
       <Link
         to="/"
-        className="absolute top-6 lg:top-8 left-6 lg:left-16 text-brutal-sm text-muted-foreground hover:text-accent transition-colors"
+        className="absolute top-6 lg:top-8 left-6 lg:left-16 text-brutal-sm hover:text-accent transition-colors"
       >
         {t("course.back")}
       </Link>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-brutal-sm text-accent-red mb-6 lg:mb-8"
-      >
-        {t("course.hero.kicker")}
-      </motion.p>
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -47,16 +40,21 @@ const Hero = () => {
         {t("course.hero.title3")}
       </motion.h1>
 
-      <div className="mt-12 lg:mt-16 flex flex-col lg:flex-row gap-4 lg:gap-6 lg:items-center">
-        <p className="text-brutal-sm text-muted-foreground max-w-full lg:max-w-xs">{t("course.hero.sub")}</p>
+      <p className="mt-8 lg:mt-12 text-sm lg:text-base font-medium normal-case tracking-normal text-foreground/90">
+        {t("course.hero.sub")}
+      </p>
+
+      <div className="mt-6 lg:mt-8 flex flex-col lg:flex-row gap-4 lg:gap-6 lg:items-center">
         <a
           href="#price"
-          className="inline-block bg-accent text-accent-foreground px-6 lg:px-8 py-3 lg:py-4 text-brutal-sm hover:bg-foreground hover:text-background transition-colors w-fit"
+          className="inline-block bg-accent text-accent-foreground px-6 lg:px-8 py-3 lg:py-4 text-sm lg:text-base font-medium tracking-normal normal-case hover:bg-foreground hover:text-background transition-colors w-fit"
         >
           {t("course.hero.cta")} →
         </a>
-        <span className="text-brutal-sm text-accent-red">{t("course.hero.spots")}</span>
       </div>
+      <p className="mt-6 text-sm lg:text-base font-medium normal-case tracking-normal text-foreground/90">
+        {t("course.hero.spots")}
+      </p>
     </section>
   );
 };
@@ -77,7 +75,6 @@ const Pain = () => {
             viewport={{ once: true }}
             className="border-t border-foreground/10 py-8 lg:py-10 flex items-baseline gap-4 lg:gap-6"
           >
-            <span className="text-brutal-sm text-accent-red flex-shrink-0">0{i + 1}</span>
             <span className="text-brutal-md break-words">{t(k)}</span>
           </motion.div>
         ))}
@@ -88,28 +85,49 @@ const Pain = () => {
 };
 
 const Who = () => {
-  const { t } = useLang();
   const items = [
-    { t: "course.who.1.t", d: "course.who.1.d" },
-    { t: "course.who.2.t", d: "course.who.2.d" },
-    { t: "course.who.3.t", d: "course.who.3.d" },
+    {
+      title: "МЕДИА",
+      text: "Для людей из медиа, которые хотят новую профессию в SMM.",
+    },
+    {
+      title: "ПРЕДПРИНИМАТЕЛИ",
+      text: "Для предпринимателей, которые хотят знать, как правильно собрать команду и контролировать работу SMM.",
+    },
+    {
+      title: "КРЕАТОРЫ И БЛОГЕРЫ",
+      text: "Для контент-креаторов и блогеров, которые хотят вырасти и увеличить чек.",
+    },
+    {
+      title: "МАРКЕТОЛОГИ",
+      text: "Для маркетологов и специалистов, желающих повысить свою квалификацию.",
+    },
+    {
+      title: "FREELANCE",
+      text: "Для тех, кто хочет работать в свободном графике или стать частью маркетинговой команды.",
+    },
   ];
+
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.who.title")}</h2>
+      <h2 className="text-brutal-lg mb-10 lg:mb-16">ДЛЯ КОГО</h2>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-        {items.map((it, i) => (
+        {items.map((item, index) => (
           <motion.div
-            key={it.t}
-            initial={{ opacity: 0, y: 20 }}
+            key={item.title}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: index * 0.08 }}
             viewport={{ once: true }}
-            className="border border-foreground/10 p-6 lg:p-8 hover:border-accent transition-colors"
+            className="border border-foreground/10 bg-background/60 p-4 lg:p-5 min-h-[160px] flex flex-col justify-between"
           >
-            <p className="text-brutal-sm text-accent-red mb-4">0{i + 1}</p>
-            <h3 className="text-brutal-md mb-3 lg:mb-4 break-words">{t(it.t)}</h3>
-            <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed">{t(it.d)}</p>
+            <h3 className="text-brutal-md leading-tight mb-1 text-foreground break-words">
+              {item.title}
+            </h3>
+            <p className="text-xs lg:text-sm text-foreground/80 leading-relaxed mt-0">
+              {item.text}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -191,9 +209,6 @@ const Program = () => {
                 onClick={() => setOpenDay(isOpen ? null : i)}
                 className="w-full grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 py-6 lg:py-8 items-baseline text-left group"
               >
-                <span className="lg:col-span-1 text-brutal-sm text-accent-red flex-shrink-0">
-                  0{i + 1}
-                </span>
                 <h3
                   className={`lg:col-span-5 text-brutal-md transition-colors break-words ${
                     isOpen ? "text-accent-red" : "group-hover:text-accent"
@@ -265,7 +280,7 @@ const WhatYouGet = () => {
             viewport={{ once: true }}
             className="flex items-baseline gap-3 py-3 lg:py-4 border-b border-foreground/10"
           >
-            <span className="text-accent-red text-brutal-sm flex-shrink-0">→</span>
+            <span className="text-accent-red flex-shrink-0">→</span>
             <span className="text-brutal-sm break-words">{t(k)}</span>
           </motion.div>
         ))}
@@ -288,7 +303,6 @@ const Format = () => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
         {items.map((it) => (
           <div key={it.l} className="border-t border-foreground/10 pt-4 lg:pt-6">
-            <p className="text-brutal-sm text-muted-foreground mb-2 lg:mb-4">{it.l}</p>
             <p className="text-brutal-md break-words">{t(it.v)}</p>
           </div>
         ))}
@@ -358,7 +372,6 @@ const Price = () => {
                 : "border-foreground/10"
             } flex flex-col`}
           >
-            <p className="text-brutal-sm text-muted-foreground mb-6">{t(tier.name)}</p>
             <p className="text-brutal-lg mb-2">{t(tier.amount)}</p>
             <p className="text-brutal-sm text-muted-foreground mb-8">{t(tier.note)}</p>
 
@@ -378,9 +391,6 @@ const Price = () => {
 
             {tier.excludes.length > 0 && (
               <div className="mb-10">
-                <p className="text-brutal-sm text-muted-foreground mb-4">
-                  {t("course.price.excludes")}
-                </p>
                 <ul className="space-y-2">
                   {tier.excludes.map((k) => (
                     <li

@@ -284,12 +284,12 @@ const translations: Translations = {
   "course.hero.title2": { ru: "КОТОРЫЙ", en: "THAT", ro: "CARE" },
   "course.hero.title3": { ru: "ПРОДАЁТ", en: "SELLS", ro: "VINDE" },
   "course.hero.sub": {
-    ru: "5 ДНЕЙ. ЖИВАЯ ГРУППА. РЕАЛЬНЫЕ КЕЙСЫ.",
-    en: "5 DAYS. LIVE GROUP. REAL CASES.",
-    ro: "5 ZILE. GRUP LIVE. CAZURI REALE.",
+    ru: "5 дней. Живая группа. Реальные кейсы.",
+    en: "5 days. Live group. Real cases.",
+    ro: "5 zile. Grup live. Cazuri reale.",
   },
-  "course.hero.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО →", en: "RESERVE A SEAT →", ro: "REZERVĂ UN LOC →" },
-  "course.hero.spots": { ru: "ОСТАЛОСЬ 12 МЕСТ", en: "12 SEATS LEFT", ro: "AU RĂMAS 12 LOCURI" },
+  "course.hero.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО", en: "RESERVE A SEAT", ro: "REZERVĂ UN LOC" },
+  "course.hero.spots": { ru: "Осталось 12 мест", en: "12 seats left", ro: "Au rămas 12 locuri" },
   // Pain
   "course.pain.title": { ru: "ЕСЛИ ЭТО ПРО ТЕБЯ", en: "IF THIS IS YOU", ro: "DACĂ ASTA EȘTI TU" },
   "course.pain.1": { ru: "ПОСТИШЬ — ТИШИНА В ОТВЕТ", en: "YOU POST — SILENCE BACK", ro: "POSTEZI — TĂCERE" },

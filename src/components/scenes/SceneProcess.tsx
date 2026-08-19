@@ -26,9 +26,6 @@ const SceneProcess = () => {
             style={{ opacity, x }}
             className={`py-12 lg:py-20 ${i % 2 === 0 ? "text-left" : "text-right"}`}
           >
-            <span className="text-brutal-sm text-muted-foreground mb-2 block">
-              0{i + 1}
-            </span>
             <p className={`text-brutal-lg ${i === steps.length - 1 ? "text-accent-red" : "text-foreground"}`}>
               {t(key)}
             </p>

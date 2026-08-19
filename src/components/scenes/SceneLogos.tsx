@@ -11,16 +11,6 @@ const SceneLogos = () => {
 
   return (
     <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-brutal-sm text-muted-foreground mb-16 lg:mb-24"
-      >
-        {t("logos.title")}
-      </motion.p>
-
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
         {logos.map((name, i) => (
           <motion.div

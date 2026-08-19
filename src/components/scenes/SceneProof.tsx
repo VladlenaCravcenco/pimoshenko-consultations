@@ -32,7 +32,6 @@ const SceneProof = () => {
           viewport={{ once: true }}
         >
           <span className="text-brutal-xl text-accent-red">30+</span>
-          <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.clients")}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -42,7 +41,6 @@ const SceneProof = () => {
           className="self-end text-right"
         >
           <span className="text-brutal-xl text-foreground">2M+</span>
-          <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.countries")}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -51,7 +49,6 @@ const SceneProof = () => {
           viewport={{ once: true }}
         >
           <span className="text-brutal-xl text-foreground">5+</span>
-          <p className="text-brutal-sm text-muted-foreground mt-2">{t("proof.revenue")}</p>
         </motion.div>
       </div>
     </section>

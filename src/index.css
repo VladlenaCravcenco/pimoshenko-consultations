@@ -92,7 +92,8 @@
   .text-brutal-xl {
     @apply text-brutal;
     font-size: clamp(2rem, 12vw, 12rem);
-    line-height: 0.85;
+    line-height: 0.95;
+    display: block;
   }
 
   .text-brutal-lg {
@@ -108,9 +109,9 @@
   }
 
   .text-brutal-sm {
-    @apply uppercase tracking-widest font-medium;
+    @apply uppercase font-medium;
     font-size: clamp(0.65rem, 1.2vw, 0.85rem);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.04em;
     word-break: break-word;
   }
 

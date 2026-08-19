@@ -35,9 +35,6 @@ const ScenePrice = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-brutal-sm text-muted-foreground mb-4">
-            {t("price.full")}
-          </p>
           <p className="text-brutal-xl text-foreground">€200</p>
         </motion.div>
 
@@ -48,9 +45,7 @@ const ScenePrice = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="text-brutal-sm text-accent-red mb-4">{t("price.booking")}</p>
           <p className="text-brutal-xl text-accent-red">€20</p>
-          <p className="text-brutal-sm text-muted-foreground mt-4">{t("price.remainder")}</p>
         </motion.div>
       </div>
 
@@ -77,16 +72,6 @@ const ScenePrice = () => {
         </a>
       </motion.div>
 
-      {/* What's included */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <p className="text-brutal-sm text-muted-foreground mb-12 lg:mb-16">{t("price.includes")}</p>
-      </motion.div>
-
       <div className="space-y-0">
         {inclusions.map((key, i) => (
           <motion.div
@@ -97,9 +82,6 @@ const ScenePrice = () => {
             viewport={{ once: true }}
             className="border-t border-foreground/10 py-6 lg:py-8 flex items-baseline gap-6"
           >
-            <span className="text-brutal-sm text-muted-foreground flex-shrink-0">
-              0{i + 1}
-            </span>
             <p className="text-brutal-md text-foreground">{t(key)}</p>
           </motion.div>
         ))}

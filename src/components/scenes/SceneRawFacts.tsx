@@ -29,9 +29,6 @@ const SceneRawFacts = () => {
                 {fact.number}
               </span>
             </div>
-            <span className="text-brutal-sm text-muted-foreground block mb-3 lg:mb-4">
-              {t(fact.label)}
-            </span>
             <p className="text-xs lg:text-sm text-muted-foreground/70 leading-relaxed max-w-md" style={{ fontFamily: "'Space Grotesk', sans-serif", textTransform: "none", letterSpacing: "0" }}>
               {t(fact.desc)}
             </p>

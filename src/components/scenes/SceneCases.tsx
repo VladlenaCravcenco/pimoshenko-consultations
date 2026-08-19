@@ -137,7 +137,6 @@ const ReelCard = ({
               <div className="w-12 h-12 border-2 border-muted-foreground/30 rounded-full flex items-center justify-center">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-muted-foreground/30 ml-1" />
               </div>
-              <span className="text-brutal-sm text-muted-foreground/40">REEL</span>
             </div>
           </div>
         )}
@@ -189,15 +188,6 @@ const SceneCases = () => {
         >
           {t("cases.title")}
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-brutal-sm text-muted-foreground"
-        >
-          {t("cases.subtitle")}
-        </motion.p>
       </div>
 
       <div className="space-y-0">
@@ -223,15 +213,7 @@ const SceneCases = () => {
                 onClick={() => toggleCase(c.key)}
                 className="py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-8 lg:items-baseline group cursor-pointer"
               >
-                <div className="lg:col-span-1 hidden lg:block">
-                  <span className="text-brutal-sm text-muted-foreground">
-                    0{i + 1}
-                  </span>
-                </div>
                 <div className="lg:col-span-3 flex items-start gap-3">
-                  <span className="text-brutal-sm text-muted-foreground lg:hidden flex-shrink-0">
-                    0{i + 1}
-                  </span>
                   <div className="flex-1">
                     <h3
                       className={`text-brutal-md lg:text-brutal-md transition-colors duration-300 leading-tight ${

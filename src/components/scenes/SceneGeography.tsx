@@ -19,9 +19,6 @@ const SceneGeography = () => {
         className="relative z-10 flex flex-col items-center text-center px-6"
       >
         <h2 className="text-brutal-xl text-accent-red">{t("geo.global")}</h2>
-        <p className="text-brutal-sm text-muted-foreground mt-8 tracking-[0.4em]">
-          {t("geo.locations")}
-        </p>
       </motion.div>
     </section>
   );
