@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { LanguageProvider, useLang } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import heroPortrait from "@/assets/hero-portrait.jpg";
 
 const Hero = () => {
   const { t } = useLang();
@@ -23,24 +24,8 @@ const Hero = () => {
       >
         {t("course.hero.title1")}
       </motion.h1>
-      <motion.h1
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.15 }}
-        className="text-brutal-xl"
-      >
-        {t("course.hero.title2")}
-      </motion.h1>
-      <motion.h1
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="text-brutal-xl text-accent-red"
-      >
-        {t("course.hero.title3")}
-      </motion.h1>
 
-      <p className="mt-8 lg:mt-12 text-sm lg:text-base font-medium normal-case tracking-normal text-foreground/90">
+      <p className="mt-8 lg:mt-12 text-sm lg:text-base font-medium normal-case tracking-normal text-foreground/90 max-w-4xl">
         {t("course.hero.sub")}
       </p>
 
@@ -52,9 +37,110 @@ const Hero = () => {
           {t("course.hero.cta")} →
         </a>
       </div>
-      <p className="mt-6 text-sm lg:text-base font-medium normal-case tracking-normal text-foreground/90">
-        {t("course.hero.spots")}
-      </p>
+    </section>
+  );
+};
+
+const ExperienceNote = () => {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const fillY = useTransform(scrollYProgress, [0.15, 0.9], ["100%", "0%"]);
+
+  const RevealText = ({
+    children,
+    className,
+  }: {
+    children: React.ReactNode;
+    className?: string;
+  }) => (
+    <motion.span
+      style={{
+        backgroundImage:
+          "linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.35) 32%, #ffffff 32%, #ffffff 100%)",
+        backgroundSize: "100% 220%",
+        backgroundPositionY: fillY,
+        WebkitBackgroundClip: "text",
+        backgroundClip: "text",
+        color: "transparent",
+        WebkitTextFillColor: "transparent",
+      }}
+      className={className}
+    >
+      {children}
+    </motion.span>
+  );
+
+  return (
+    <section ref={ref} className="scene py-16 lg:py-24 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1.25fr] gap-8 lg:gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative overflow-hidden border border-foreground/10 bg-background"
+        >
+          <img src={heroPortrait} alt="" className="w-full h-[420px] lg:h-[520px] object-cover object-center" />
+          <div className="absolute bottom-5 left-5 right-5 bg-background/90 backdrop-blur-sm border border-foreground/10 p-4 shadow-[8px_8px_0_rgba(0,0,0,0.08)]">
+            <p className="text-sm lg:text-base leading-relaxed tracking-[0.02em] text-foreground/45">
+              <RevealText className="font-black text-foreground/45">
+                10 лет
+              </RevealText>{" "}опыта в маркетинге — в одном
+              <RevealText className="font-black text-foreground/45"> офлайн-курсе</RevealText>
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.08 }}
+          viewport={{ once: true }}
+          className="space-y-5 lg:space-y-6"
+        >
+          <h3 className="text-brutal-lg leading-[0.9] tracking-[-0.04em] text-foreground/80">
+            <RevealText>
+              Практика + Офлайн обучение
+            </RevealText>
+          </h3>
+
+          <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
+            <RevealText>
+              Курс создан для тех, кто хочет освоить SMM-профессию и выйти на новый уровень.
+            </RevealText>
+          </p>
+
+          <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
+            <RevealText>
+              Вы будете работать с реальными проектами, создавать контент, оформлять профессиональный профиль
+              и запускать работу, с которой сможете начать уже после окончания курса.
+            </RevealText>
+          </p>
+
+          <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
+            <RevealText>
+              Я расскажу, как узаконить профессию, как идти в ногу с рынком, куда расти из SMM-специалиста,
+              как выстраивать стратегию, командообразование и делегирование.
+            </RevealText>
+          </p>
+
+          <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
+            <RevealText>
+              Я не учу вести страницы — я учу строить систему SMM, которая позволяет собирать команду под
+              любой тип бизнеса или вести его самостоятельно.
+            </RevealText>
+          </p>
+
+          <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
+            <RevealText>
+              Мы определяем ваш уровень заранее и принимаем решение, в какую группу вас лучше определить.
+            </RevealText>
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };
@@ -577,6 +663,7 @@ const CourseInner = () => (
     <LanguageSwitcher />
     <main className="bg-background">
       <Hero />
+      <ExperienceNote />
       <Pain />
       <Who />
       <Program />
