@@ -136,69 +136,72 @@ const Who = () => {
 };
 
 const Program = () => {
-  const { t } = useLang();
   const [openDay, setOpenDay] = useState<number | null>(0);
   const days = [
     {
-      t: "course.prog.d1.t",
-      d: "course.prog.d1.d",
+      title: "ДЕНЬ 1 · СТРАТЕГИЯ",
+      desc: "Позиционирование, аудитория, ниша, продукт и структура продвижения.",
       points: [
-        "course.prog.d1.p1",
-        "course.prog.d1.p2",
-        "course.prog.d1.p3",
-        "course.prog.d1.p4",
+        "Основы маркетинга и SMM.",
+        "Построение стратегии продвижения для разных платформ.",
+        "Анализ аудитории и конкурентов.",
+        "Создание контент-стратегии.",
       ],
     },
     {
-      t: "course.prog.d2.t",
-      d: "course.prog.d2.d",
+      title: "ДЕНЬ 2 · КОНТЕНТ",
+      desc: "Как придумывать идеи, снимать и собирать контент в систему.",
       points: [
-        "course.prog.d2.p1",
-        "course.prog.d2.p2",
-        "course.prog.d2.p3",
-        "course.prog.d2.p4",
+        "Сценарии Reels и коротких видео.",
+        "Работа с камерой телефона.",
+        "Монтаж видео (CapCut).",
+        "Canva и создание визуала и КП.",
+        "Оформление Instagram.",
       ],
     },
     {
-      t: "course.prog.d3.t",
-      d: "course.prog.d3.d",
+      title: "ДЕНЬ 3 · ПРОДАЖИ",
+      desc: "Как продавать через SMM, работать с клиентами и выстраивать ценность.",
       points: [
-        "course.prog.d3.p1",
-        "course.prog.d3.p2",
-        "course.prog.d3.p3",
-        "course.prog.d3.p4",
+        "Личный бренд SMM-специалиста.",
+        "Работа с клиентами.",
+        "Создание коммерческого предложения (КП).",
+        "Формирование стоимости услуг.",
+        "Поиск первых клиентов.",
       ],
     },
     {
-      t: "course.prog.d4.t",
-      d: "course.prog.d4.d",
+      title: "ДЕНЬ 4 · МЕТРИКИ И РЕКЛАМА",
+      desc: "Как понимать эффективность, запускать продвижение и работать с результатом.",
       points: [
-        "course.prog.d4.p1",
-        "course.prog.d4.p2",
-        "course.prog.d4.p3",
-        "course.prog.d4.p4",
+        "Работа с метриками и таргетом.",
+        "Работа с текстами.",
+        "Использование AI в работе SMM.",
       ],
     },
     {
-      t: "course.prog.d5.t",
-      d: "course.prog.d5.d",
+      title: "ДЕНЬ 5 · ПРАКТИКА",
+      desc: "Практические уроки и разбор реальных кейсов.",
+      premium: true,
+      premiumLabel: "только для Premium",
       points: [
-        "course.prog.d5.p1",
-        "course.prog.d5.p2",
-        "course.prog.d5.p3",
-        "course.prog.d5.p4",
+        "Съёмка на улице.",
+        "Съёмка в ресторане.",
+        "Съёмка в Твистер.",
+        "Практические уроки для premium-пакета: разбор реальных кейсов, работа с контентом и закрепление навыков на практике.",
       ],
     },
   ];
+
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.prog.title")}</h2>
+      <h2 className="text-brutal-lg mb-12 lg:mb-16">ПРОГРАММА · 5 ДНЕЙ</h2>
       <div className="space-y-0">
         {days.map((d, i) => {
           const isOpen = openDay === i;
           return (
             <motion.div
-              key={d.t}
+              key={d.title}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08 }}
@@ -214,10 +217,10 @@ const Program = () => {
                     isOpen ? "text-accent-red" : "group-hover:text-accent"
                   }`}
                 >
-                  {t(d.t)}
+                  {d.title}
                 </h3>
                 <p className="lg:col-span-5 text-xs lg:text-sm text-muted-foreground leading-relaxed">
-                  {t(d.d)}
+                  {d.desc}
                 </p>
                 <span
                   className={`lg:col-span-1 text-right text-brutal-md transition-transform flex-shrink-0 ${
@@ -234,6 +237,11 @@ const Program = () => {
                   className="overflow-hidden"
                 >
                   <div className="lg:pl-[8.33%] pb-8 lg:pb-10 px-2 lg:px-0">
+                    {d.premium && (
+                      <div className="mb-4 inline-flex items-center border border-accent-red/80 bg-accent-red/10 px-2.5 py-1 text-[10px] lg:text-[11px] font-medium uppercase tracking-[0.16em] text-accent-red">
+                        {d.premiumLabel}
+                      </div>
+                    )}
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-12 gap-y-2 lg:gap-y-3 max-w-3xl">
                       {d.points.map((p) => (
                         <li
@@ -241,7 +249,7 @@ const Program = () => {
                           className="flex items-baseline gap-2 lg:gap-3 text-xs lg:text-sm text-foreground/80"
                         >
                           <span className="text-accent-red flex-shrink-0">→</span>
-                          <span>{t(p)}</span>
+                          <span>{p}</span>
                         </li>
                       ))}
                     </ul>
@@ -297,7 +305,7 @@ const WhatYouGet = () => {
             className="flex items-center gap-4 lg:gap-5 border-t border-foreground/10 py-4 lg:py-5 text-left"
           >
             <span className="text-accent-red text-xl lg:text-2xl leading-none flex-shrink-0">→</span>
-            <span className="text-lg lg:text-2xl leading-tight break-words font-medium">{item}</span>
+            <span className="text-[1.125rem] leading-tight break-words font-medium">{item}</span>
           </motion.div>
         ))}
 
@@ -312,7 +320,7 @@ const WhatYouGet = () => {
               className="flex items-start gap-3 lg:gap-4 border-t border-foreground/10 py-3 lg:py-4"
             >
               <span className="text-accent-red text-lg lg:text-xl leading-none mt-1 flex-shrink-0">→</span>
-              <span className="text-sm lg:text-base text-foreground/90 leading-relaxed break-words">
+              <span className="text-[1.125rem] leading-relaxed break-words text-foreground/90">
                 {skill}
               </span>
             </motion.div>
