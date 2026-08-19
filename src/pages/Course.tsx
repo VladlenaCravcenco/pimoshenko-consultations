@@ -258,32 +258,66 @@ const Program = () => {
 };
 
 const WhatYouGet = () => {
-  const { t } = useLang();
-  const items = [
-    "course.get.1",
-    "course.get.2",
-    "course.get.3",
-    "course.get.4",
-    "course.get.5",
-    "course.get.6",
+  const benefits = [
+    "Разрабатывать полноценную SMM-стратегию.",
+    "Собрать свою команду для продвижения.",
+    "Повышать стоимость продукта каждые пол года.",
+    "Продавать проекты под ключ.",
   ];
+
+  const skills = [
+    "Анализировать целевую аудиторию и конкурентов.",
+    "Создавать контент-планы.",
+    "Снимать профессиональный контент на телефон.",
+    "Монтировать Reels и TikTok.",
+    "Работать с AI-инструментами для создания контента.",
+    "Оформлять Instagram-профили.",
+    "Создавать продающие Stories.",
+    "Писать тексты для брендов.",
+    "Запускать продвижение и понимать основы рекламы.",
+    "Общаться с клиентами и вести проекты.",
+    "Формировать стоимость своих услуг.",
+    "Создать собственное портфолио.",
+    "Продвигать себя как SMM-специалиста.",
+    "Найти первых клиентов и начать работать в профессии.",
+  ];
+
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.get.title")}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-12 gap-y-4 lg:gap-y-6">
-        {items.map((k, i) => (
+      <h2 className="text-brutal-lg mb-12 lg:mb-16">ЧТО ПОЛУЧИШЬ</h2>
+
+      <div className="mx-auto max-w-5xl space-y-0">
+        {benefits.map((item, index) => (
           <motion.div
-            key={k}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.05 }}
-            viewport={{ once: true }}
-            className="flex items-baseline gap-3 py-3 lg:py-4 border-b border-foreground/10"
+            key={item}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.08, duration: 0.35 }}
+            viewport={{ once: true, amount: 0.55 }}
+            className="flex items-center gap-4 lg:gap-5 border-t border-foreground/10 py-4 lg:py-5 text-left"
           >
-            <span className="text-accent-red flex-shrink-0">→</span>
-            <span className="text-brutal-sm break-words">{t(k)}</span>
+            <span className="text-accent-red text-xl lg:text-2xl leading-none flex-shrink-0">→</span>
+            <span className="text-lg lg:text-2xl leading-tight break-words font-medium">{item}</span>
           </motion.div>
         ))}
+
+        <div className="mt-12 lg:mt-16 space-y-0">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill}
+              initial={{ opacity: 0, x: 16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15 + index * 0.04, duration: 0.25 }}
+              viewport={{ once: true, amount: 0.6 }}
+              className="flex items-start gap-3 lg:gap-4 border-t border-foreground/10 py-3 lg:py-4"
+            >
+              <span className="text-accent-red text-lg lg:text-xl leading-none mt-1 flex-shrink-0">→</span>
+              <span className="text-sm lg:text-base text-foreground/90 leading-relaxed break-words">
+                {skill}
+              </span>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
