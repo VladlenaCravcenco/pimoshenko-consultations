@@ -57,7 +57,6 @@ const SceneBooking = () => {
               onChange={(e) => setForm({ ...form, [textSteps[step].key]: e.target.value })}
               onKeyDown={(e) => e.key === "Enter" && handleNext()}
               className="w-full bg-transparent border-b-2 border-foreground/20 focus:border-accent text-foreground text-brutal-md py-4 outline-none transition-colors"
-              autoFocus
             />
             <div className="mt-12">
               <span onClick={handleNext} className="cta-link text-brutal-sm text-foreground/60 hover:text-accent cursor-pointer">
