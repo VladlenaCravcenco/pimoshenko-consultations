@@ -171,37 +171,38 @@ const Pain = () => {
 };
 
 const Who = () => {
+  const { t } = useLang();
   const items = [
     {
-      title: "МЕДИА",
-      text: "Для людей из медиа, которые хотят новую профессию в SMM.",
+      titleKey: "course.who.media.title",
+      textKey: "course.who.media.text",
     },
     {
-      title: "ПРЕДПРИНИМАТЕЛИ",
-      text: "Для предпринимателей, которые хотят знать, как правильно собрать команду и контролировать работу SMM.",
+      titleKey: "course.who.business.title",
+      textKey: "course.who.business.text",
     },
     {
-      title: "КРЕАТОРЫ И БЛОГЕРЫ",
-      text: "Для контент-креаторов и блогеров, которые хотят вырасти и увеличить чек.",
+      titleKey: "course.who.creators.title",
+      textKey: "course.who.creators.text",
     },
     {
-      title: "МАРКЕТОЛОГИ",
-      text: "Для маркетологов и специалистов, желающих повысить свою квалификацию.",
+      titleKey: "course.who.marketers.title",
+      textKey: "course.who.marketers.text",
     },
     {
-      title: "FREELANCE",
-      text: "Для тех, кто хочет работать в свободном графике или стать частью маркетинговой команды.",
+      titleKey: "course.who.freelance.title",
+      textKey: "course.who.freelance.text",
     },
   ];
 
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
-      <h2 className="text-brutal-lg mb-10 lg:mb-16">ДЛЯ КОГО</h2>
+      <h2 className="text-brutal-lg mb-10 lg:mb-16">{t("course.who.title")}</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         {items.map((item, index) => (
           <motion.div
-            key={item.title}
+            key={item.titleKey}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.08 }}
@@ -209,10 +210,10 @@ const Who = () => {
             className="border border-foreground/10 bg-background/60 p-4 lg:p-5 min-h-[160px] flex flex-col justify-between"
           >
             <h3 className="text-brutal-md leading-tight mb-1 text-foreground break-words">
-              {item.title}
+              {t(item.titleKey)}
             </h3>
             <p className="text-xs lg:text-sm text-foreground/80 leading-relaxed mt-0">
-              {item.text}
+              {t(item.textKey)}
             </p>
           </motion.div>
         ))}
@@ -222,72 +223,47 @@ const Who = () => {
 };
 
 const Program = () => {
+  const { t } = useLang();
   const [openDay, setOpenDay] = useState<number | null>(0);
   const days = [
     {
-      title: "ДЕНЬ 1 · СТРАТЕГИЯ",
-      desc: "Позиционирование, аудитория, ниша, продукт и структура продвижения.",
-      points: [
-        "Основы маркетинга и SMM.",
-        "Построение стратегии продвижения для разных платформ.",
-        "Анализ аудитории и конкурентов.",
-        "Создание контент-стратегии.",
-      ],
+      titleKey: "course.prog.d1.t",
+      descKey: "course.prog.d1.d",
+      pointsKeys: ["course.prog.d1.p1", "course.prog.d1.p2", "course.prog.d1.p3", "course.prog.d1.p4"],
     },
     {
-      title: "ДЕНЬ 2 · КОНТЕНТ",
-      desc: "Как придумывать идеи, снимать и собирать контент в систему.",
-      points: [
-        "Сценарии Reels и коротких видео.",
-        "Работа с камерой телефона.",
-        "Монтаж видео (CapCut).",
-        "Canva и создание визуала и КП.",
-        "Оформление Instagram.",
-      ],
+      titleKey: "course.prog.d2.t",
+      descKey: "course.prog.d2.d",
+      pointsKeys: ["course.prog.d2.p1", "course.prog.d2.p2", "course.prog.d2.p3", "course.prog.d2.p4"],
     },
     {
-      title: "ДЕНЬ 3 · ПРОДАЖИ",
-      desc: "Как продавать через SMM, работать с клиентами и выстраивать ценность.",
-      points: [
-        "Личный бренд SMM-специалиста.",
-        "Работа с клиентами.",
-        "Создание коммерческого предложения (КП).",
-        "Формирование стоимости услуг.",
-        "Поиск первых клиентов.",
-      ],
+      titleKey: "course.prog.d3.t",
+      descKey: "course.prog.d3.d",
+      pointsKeys: ["course.prog.d3.p1", "course.prog.d3.p2", "course.prog.d3.p3", "course.prog.d3.p4"],
     },
     {
-      title: "ДЕНЬ 4 · МЕТРИКИ И РЕКЛАМА",
-      desc: "Как понимать эффективность, запускать продвижение и работать с результатом.",
-      points: [
-        "Работа с метриками и таргетом.",
-        "Работа с текстами.",
-        "Использование AI в работе SMM.",
-      ],
+      titleKey: "course.prog.d4.t",
+      descKey: "course.prog.d4.d",
+      pointsKeys: ["course.prog.d4.p1", "course.prog.d4.p2", "course.prog.d4.p3"],
     },
     {
-      title: "ДЕНЬ 5 · ПРАКТИКА",
-      desc: "Практические уроки и разбор реальных кейсов.",
+      titleKey: "course.prog.d5.t",
+      descKey: "course.prog.d5.d",
       premium: true,
-      premiumLabel: "только для Premium",
-      points: [
-        "Съёмка на улице.",
-        "Съёмка в ресторане.",
-        "Съёмка в Твистер.",
-        "Практические уроки для premium-пакета: разбор реальных кейсов, работа с контентом и закрепление навыков на практике.",
-      ],
+      premiumLabelKey: "course.prog.d5.premium",
+      pointsKeys: ["course.prog.d5.p1", "course.prog.d5.p2", "course.prog.d5.p3", "course.prog.d5.p4"],
     },
   ];
 
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">ПРОГРАММА · 5 ДНЕЙ</h2>
+      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.prog.title")}</h2>
       <div className="space-y-0">
         {days.map((d, i) => {
           const isOpen = openDay === i;
           return (
             <motion.div
-              key={d.title}
+              key={d.titleKey}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08 }}
@@ -303,10 +279,10 @@ const Program = () => {
                     isOpen ? "text-accent-red" : "group-hover:text-accent"
                   }`}
                 >
-                  {d.title}
+                  {t(d.titleKey)}
                 </h3>
                 <p className="lg:col-span-5 text-xs lg:text-sm text-muted-foreground leading-relaxed">
-                  {d.desc}
+                  {t(d.descKey)}
                 </p>
                 <div className="lg:col-span-1 flex justify-end items-center">
                   <span
@@ -327,17 +303,17 @@ const Program = () => {
                   <div className="lg:pl-[8.33%] pb-8 lg:pb-10 px-2 lg:px-0">
                     {d.premium && (
                       <div className="mb-4 inline-flex items-center border border-accent-red/80 bg-accent-red/10 px-2.5 py-1 text-[10px] lg:text-[11px] font-medium uppercase tracking-[0.16em] text-accent-red">
-                        {d.premiumLabel}
+                        {t(d.premiumLabelKey)}
                       </div>
                     )}
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-12 gap-y-2 lg:gap-y-3 max-w-3xl">
-                      {d.points.map((p) => (
+                      {d.pointsKeys.map((pk) => (
                         <li
-                          key={p}
+                          key={pk}
                           className="flex items-baseline gap-2 lg:gap-3 text-xs lg:text-sm text-foreground/80"
                         >
                           <span className="text-accent-red flex-shrink-0">→</span>
-                          <span>{p}</span>
+                          <span>{t(pk)}</span>
                         </li>
                       ))}
                     </ul>
@@ -354,6 +330,7 @@ const Program = () => {
 };
 
 const WhatYouGet = () => {
+  const { t } = useLang();
   const benefits = [
     "Разрабатывать полноценную SMM-стратегию.",
     "Собрать свою команду для продвижения.",
@@ -380,7 +357,7 @@ const WhatYouGet = () => {
 
   return (
     <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">ЧТО ПОЛУЧИШЬ</h2>
+      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.get.title")}</h2>
 
       <div className="mx-auto max-w-5xl space-y-0">
         {benefits.map((item, index) => (

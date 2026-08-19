@@ -296,26 +296,6 @@ const translations: Translations = {
   "course.pain.2": { ru: "Я УПЕРСЯ В ПОТОЛОК", en: "I HIT A CEILING", ro: "AM AJUNS LA TAVAN" },
   "course.pain.3": { ru: "НЕ ПОНИМАЮ, КАК ПОВЫСИТЬ ЧЕК", en: "I DON'T UNDERSTAND HOW TO INCREASE THE CHECK", ro: "NU ÎNȚLEG CUM SĂ CREȘT CHECK-UL" },
   "course.pain.4": { ru: "Я ВЫГОРЕЛА В СВОЕЙ РАБОТЕ", en: "I BURNED OUT IN MY WORK", ro: "AM ARS ÎN MUNCĂ" },
-  // For who
-  "course.who.title": { ru: "ДЛЯ КОГО", en: "WHO IT'S FOR", ro: "PENTRU CINE" },
-  "course.who.1.t": { ru: "ЭКСПЕРТЫ", en: "EXPERTS", ro: "EXPERȚI" },
-  "course.who.1.d": {
-    ru: "Хочешь упаковать себя как личный бренд и продавать через Instagram.",
-    en: "Want to package yourself as a personal brand and sell through Instagram.",
-    ro: "Vrei să te împachetezi ca brand personal și să vinzi prin Instagram.",
-  },
-  "course.who.2.t": { ru: "ВЛАДЕЛЬЦЫ БИЗНЕСА", en: "BUSINESS OWNERS", ro: "PROPRIETARI DE AFACERI" },
-  "course.who.2.d": {
-    ru: "Хочешь сам управлять контентом, а не зависеть от агентств.",
-    en: "Want to run your own content instead of relying on agencies.",
-    ro: "Vrei să-ți gestionezi singur conținutul, fără agenții.",
-  },
-  "course.who.3.t": { ru: "НАЧИНАЮЩИЕ SMM", en: "BEGINNER SMM", ro: "ÎNCEPĂTORI SMM" },
-  "course.who.3.d": {
-    ru: "Хочешь войти в профессию и сразу работать с реальными клиентами.",
-    en: "Want to enter the profession and start with real clients right away.",
-    ro: "Vrei să intri în profesie și să lucrezi imediat cu clienți reali.",
-  },
   // Program
   "course.prog.title": { ru: "ПРОГРАММА · 5 ДНЕЙ", en: "PROGRAM · 5 DAYS", ro: "PROGRAM · 5 ZILE" },
   "course.prog.d1.t": { ru: "ДЕНЬ 1 · СТРАТЕГИЯ", en: "DAY 1 · STRATEGY", ro: "ZIUA 1 · STRATEGIE" },
@@ -448,6 +428,11 @@ const translations: Translations = {
     ru: "Нетворкинг и закрытый чат",
     en: "Networking and private chat",
     ro: "Networking și chat privat",
+  },
+  "course.prog.d5.premium": {
+    ru: "только для Premium",
+    en: "premium only",
+    ro: "doar pentru premium",
   },
   // What you get
   "course.get.title": { ru: "ЧТО ПОЛУЧИШЬ", en: "WHAT YOU GET", ro: "CE PRIMEȘTI" },
@@ -615,6 +600,38 @@ const translations: Translations = {
     ru: "Диплом о прохождении курса",
     en: "Certificate of completion",
     ro: "Diplomă de absolvire",
+  },
+  // Who (Для кого)
+  "course.who.title": { ru: "Для кого", en: "WHO IT'S FOR", ro: "PENTRU CINE" },
+  "course.who.media.title": { ru: "МЕДИА", en: "MEDIA", ro: "MEDIA" },
+  "course.who.media.text": {
+    ru: "Для людей из медиа, которые хотят новую профессию в SMM.",
+    en: "For media professionals who want a new profession in SMM.",
+    ro: "Pentru profesioniștii din media care doresc o nouă profesie în SMM.",
+  },
+  "course.who.business.title": { ru: "ПРЕДПРИНИМАТЕЛИ", en: "ENTREPRENEURS", ro: "ANTREPRENORI" },
+  "course.who.business.text": {
+    ru: "Для предпринимателей, которые хотят знать, как правильно собрать команду и контролировать работу SMM.",
+    en: "For entrepreneurs who want to know how to properly build a team and manage SMM work.",
+    ro: "Pentru antreprenori care doresc să știe cum să construiască corect o echipă și să gestioneze munca SMM.",
+  },
+  "course.who.creators.title": { ru: "КРЕАТОРЫ И БЛОГЕРЫ", en: "CREATORS & BLOGGERS", ro: "CREATORI ȘI BLOGGERI" },
+  "course.who.creators.text": {
+    ru: "Для контент-креаторов и блогеров, которые хотят вырасти и увеличить чек.",
+    en: "For content creators and bloggers who want to grow and increase their earnings.",
+    ro: "Pentru creatorii de conținut și bloggeri care vor să crească și să-și mărească veniturile.",
+  },
+  "course.who.marketers.title": { ru: "МАРКЕТОЛОГИ", en: "MARKETERS", ro: "MARKETERI" },
+  "course.who.marketers.text": {
+    ru: "Для маркетологов и специалистов, желающих повысить свою квалификацию.",
+    en: "For marketers and specialists who want to improve their qualifications.",
+    ro: "Pentru marketeri și specialiști care doresc să-și îmbunătățească calificarea.",
+  },
+  "course.who.freelance.title": { ru: "FREELANCE", en: "FREELANCE", ro: "FREELANCE" },
+  "course.who.freelance.text": {
+    ru: "Для тех, кто хочет работать в свободном графике или стать частью маркетинговой команды.",
+    en: "For those who want to work on a flexible schedule or become part of a marketing team.",
+    ro: "Pentru cei care vor să lucreze în program flexibil sau să devină parte a unei echipe de marketing.",
   },
   // FAQ
   "course.faq.title": { ru: "ВОПРОСЫ", en: "QUESTIONS", ro: "ÎNTREBĂRI" },
