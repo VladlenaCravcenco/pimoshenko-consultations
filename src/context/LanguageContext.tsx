@@ -465,111 +465,156 @@ const translations: Translations = {
   "course.fmt.lang": { ru: "RU · RO", en: "RU · RO", ro: "RU · RO" },
   // Price
   "course.price.title": { ru: "СТОИМОСТЬ", en: "PRICE", ro: "PREȚ" },
-  "course.price.early": { ru: "РАННЯЯ ПТАШКА", en: "EARLY BIRD", ro: "EARLY BIRD" },
-  "course.price.early.amount": { ru: "€450", en: "€450", ro: "€450" },
-  "course.price.early.note": { ru: "ДО КОНЦА МЕСЯЦА", en: "TILL END OF MONTH", ro: "PÂNĂ LA SFÂRȘITUL LUNII" },
-  "course.price.std": { ru: "СТАНДАРТ", en: "STANDARD", ro: "STANDARD" },
-  "course.price.std.amount": { ru: "€650", en: "€650", ro: "€650" },
+  "course.price.std": { ru: "STANDARD", en: "STANDARD", ro: "STANDARD" },
+  "course.price.std.amount": { ru: "€500", en: "€500", ro: "€500" },
   "course.price.std.note": { ru: "ОБЫЧНАЯ ЦЕНА", en: "REGULAR PRICE", ro: "PREȚ OBIȘNUIT" },
-  "course.price.vip": { ru: "VIP · 1 НА 1", en: "VIP · 1 ON 1", ro: "VIP · 1 LA 1" },
-  "course.price.vip.amount": { ru: "€1500", en: "€1500", ro: "€1500" },
-  "course.price.vip.note": { ru: "ИНДИВИДУАЛЬНОЕ СОПРОВОЖДЕНИЕ", en: "PERSONAL MENTORING", ro: "MENTORAT PERSONAL" },
+  "course.price.pro": { ru: "PRO", en: "PRO", ro: "PRO" },
+  "course.price.pro.amount": { ru: "€750", en: "€750", ro: "€750" },
+  "course.price.pro.note": { ru: "ПРОДВИНУТЫЙ ПАКЕТ", en: "ADVANCED PACKAGE", ro: "PACHET AVANSAT" },
+  "course.price.elite": { ru: "ELITE", en: "ELITE", ro: "ELITE" },
+  "course.price.elite.amount": { ru: "€1000", en: "€1000", ro: "€1000" },
+  "course.price.elite.note": { ru: "ПРЕМИУМ ПАКЕТ", en: "PREMIUM PACKAGE", ro: "PACHET PREMIUM" },
   "course.price.cta": { ru: "ЗАБРОНИРОВАТЬ →", en: "BOOK →", ro: "REZERVĂ →" },
   // Includes / excludes labels
-  "course.price.includes": { ru: "ВХОДИТ В ПАКЕТ", en: "WHAT'S INCLUDED", ro: "INCLUS ÎN PACHET" },
+  "course.price.includes": { ru: "ЧТО ВХОДИТ", en: "WHAT'S INCLUDED", ro: "CE INCLUDE" },
   "course.price.excludes": { ru: "НЕ ВХОДИТ", en: "NOT INCLUDED", ro: "NU ESTE INCLUS" },
-  // Early Bird
-  "course.price.early.inc.1": {
-    ru: "5 дней живого обучения",
-    en: "5 days of live training",
-    ro: "5 zile de training live",
-  },
-  "course.price.early.inc.2": {
-    ru: "Все рабочие материалы и шаблоны",
-    en: "All workbooks and templates",
-    ro: "Toate materialele de lucru și șabloanele",
-  },
-  "course.price.early.inc.3": {
-    ru: "Кофе-брейки и снеки на площадке",
-    en: "Coffee breaks and snacks on-site",
-    ro: "Pauze de cafea și gustări la fața locului",
-  },
-  "course.price.early.inc.4": {
-    ru: "Сертификат об окончании",
-    en: "Completion certificate",
-    ro: "Certificat de finalizare",
-  },
-  "course.price.early.exc.1": {
-    ru: "Личный разбор после курса",
-    en: "Personal review after the course",
-    ro: "Analiză personală după curs",
-  },
-  "course.price.early.exc.2": {
-    ru: "Поддержка в чате 30 дней",
-    en: "30-day chat support",
-    ro: "Suport în chat 30 de zile",
-  },
   // Standard
   "course.price.std.inc.1": {
-    ru: "Всё из тарифа Early Bird",
-    en: "Everything from Early Bird",
-    ro: "Tot ce e în Early Bird",
+    ru: "5 дней офлайн-обучения",
+    en: "5 days of offline training",
+    ro: "5 zile de training offline",
   },
   "course.price.std.inc.2": {
-    ru: "Поддержка в закрытом чате 30 дней",
-    en: "30-day private chat support",
-    ro: "Suport chat privat 30 de zile",
+    ru: "Полная теоретическая программа",
+    en: "Full theoretical program",
+    ro: "Programă teoretică completă",
   },
   "course.price.std.inc.3": {
-    ru: "Запись всех дней курса",
-    en: "Recording of all course days",
-    ro: "Înregistrarea tuturor zilelor",
+    ru: "Рабочая тетрадь",
+    en: "Workbook",
+    ro: "Caiet de lucru",
   },
   "course.price.std.inc.4": {
-    ru: "Доступ к комьюнити выпускников",
-    en: "Access to alumni community",
-    ro: "Acces la comunitatea absolvenților",
+    ru: "Все презентации и материалы",
+    en: "All presentations and materials",
+    ro: "Toate prezentările și materialele",
   },
   "course.price.std.inc.5": {
-    ru: "Бонусные мастер-классы",
-    en: "Bonus masterclasses",
-    ro: "Masterclass-uri bonus",
+    ru: "Домашние задания",
+    en: "Homework assignments",
+    ro: "Teme de casă",
   },
-  "course.price.std.exc.1": {
-    ru: "Индивидуальные сессии 1 на 1",
-    en: "Individual 1-on-1 sessions",
-    ro: "Sesiuni individuale 1 la 1",
+  "course.price.std.inc.6": {
+    ru: "Закрытый чат участников",
+    en: "Private participant chat",
+    ro: "Chat privat al participanților",
   },
-  // VIP
-  "course.price.vip.inc.1": {
-    ru: "Всё из тарифа Стандарт",
-    en: "Everything from Standard",
-    ro: "Tot ce e în Standard",
+  "course.price.std.inc.7": {
+    ru: "Диплом о прохождении курса",
+    en: "Certificate of completion",
+    ro: "Diplomă de absolvire",
   },
-  "course.price.vip.inc.2": {
-    ru: "3 личные сессии 1 на 1 со мной",
-    en: "3 personal 1-on-1 sessions with me",
-    ro: "3 sesiuni personale 1 la 1 cu mine",
+  // Pro
+  "course.price.pro.inc.1": {
+    ru: "Всё, что входит в STANDARD",
+    en: "Everything included in STANDARD",
+    ro: "Tot ce este inclus în STANDARD",
   },
-  "course.price.vip.inc.3": {
-    ru: "Персональный аудит аккаунта",
-    en: "Personal account audit",
-    ro: "Audit personal al contului",
+  "course.price.pro.inc.2": {
+    ru: "3 дополнительных дня практики на реальных проектах",
+    en: "3 extra days of practice on real projects",
+    ro: "3 zile suplimentare de practică pe proiecte reale",
   },
-  "course.price.vip.inc.4": {
-    ru: "Стратегия продвижения под ключ",
-    en: "Turnkey promotion strategy",
-    ro: "Strategie de promovare la cheie",
+  "course.price.pro.inc.3": {
+    ru: "Оффлайн занятие с TikTok-менеджером",
+    en: "Offline session with a TikTok manager",
+    ro: "Sesiune offline cu un manager TikTok",
   },
-  "course.price.vip.inc.5": {
-    ru: "Поддержка в чате 90 дней",
-    en: "90-day chat support",
-    ro: "Suport chat 90 de zile",
+  "course.price.pro.inc.4": {
+    ru: "Оффлайн занятие с видеоператором",
+    en: "Offline session with a videographer",
+    ro: "Sesiune offline cu un operator video",
   },
-  "course.price.vip.inc.6": {
-    ru: "Лучшее место в зале и ужин со спикером",
-    en: "Best seat in the room and dinner with the speaker",
-    ro: "Cel mai bun loc în sală și cină cu vorbitorul",
+  "course.price.pro.inc.5": {
+    ru: "Практические съёмки для бизнеса",
+    en: "Practical shoots for business",
+    ro: "Filmări practice pentru business",
+  },
+  "course.price.pro.inc.6": {
+    ru: "Работа с реальными кейсами",
+    en: "Work with real case studies",
+    ro: "Lucru cu studii de caz reale",
+  },
+  "course.price.pro.inc.7": {
+    ru: "Создание собственного портфолио",
+    en: "Build your own portfolio",
+    ro: "Crearea propriului portofoliu",
+  },
+  "course.price.pro.inc.8": {
+    ru: "Индивидуальная обратная связь по домашним заданиям",
+    en: "Individual feedback on homework",
+    ro: "Feedback individual la temele de casă",
+  },
+  "course.price.pro.inc.9": {
+    ru: "Разбор вашего Instagram-профиля",
+    en: "Review of your Instagram profile",
+    ro: "Analiza profilului tău Instagram",
+  },
+  "course.price.pro.inc.10": {
+    ru: "Персональные рекомендации по развитию в профессии",
+    en: "Personal recommendations for professional growth",
+    ro: "Recomandări personale pentru dezvoltarea în profesie",
+  },
+  "course.price.pro.inc.11": {
+    ru: "Диплом о прохождении курса",
+    en: "Certificate of completion",
+    ro: "Diplomă de absolvire",
+  },
+  // Elite
+  "course.price.elite.inc.1": {
+    ru: "Всё, что входит в PRO",
+    en: "Everything included in PRO",
+    ro: "Tot ce este inclus în PRO",
+  },
+  "course.price.elite.inc.2": {
+    ru: "Личное сопровождение в течение 1 месяца после окончания курса",
+    en: "Personal support for 1 month after the course",
+    ro: "Suport personal timp de 1 lună după curs",
+  },
+  "course.price.elite.inc.3": {
+    ru: "Участие в реальных коммерческих съёмках вместе с моей командой",
+    en: "Participation in real commercial shoots with my team",
+    ro: "Participare la filmări comerciale reale împreună cu echipa mea",
+  },
+  "course.price.elite.inc.4": {
+    ru: "Практический опыт работы с брендами и клиентами",
+    en: "Practical experience working with brands and clients",
+    ro: "Experiență practică cu branduri și clienți",
+  },
+  "course.price.elite.inc.5": {
+    ru: "Помощь в создании сильного портфолио",
+    en: "Help creating a strong portfolio",
+    ro: "Ajutor la crearea unui portofoliu puternic",
+  },
+  "course.price.elite.inc.6": {
+    ru: "Индивидуальная обратная связь на протяжении месяца",
+    en: "Individual feedback throughout the month",
+    ro: "Feedback individual pe parcursul lunii",
+  },
+  "course.price.elite.inc.7": {
+    ru: "Приоритетная поддержка по вопросам клиентов и проектов",
+    en: "Priority support for client and project questions",
+    ro: "Suport prioritar pentru întrebări despre clienți și proiecte",
+  },
+  "course.price.elite.inc.8": {
+    ru: "Возможность пройти стажировку и получить предложение о работе в моей команде",
+    en: "Opportunity to intern and receive a job offer in my team",
+    ro: "Posibilitatea de a face internship și de a primi o ofertă de muncă în echipa mea",
+  },
+  "course.price.elite.inc.9": {
+    ru: "Диплом о прохождении курса",
+    en: "Certificate of completion",
+    ro: "Diplomă de absolvire",
   },
   // FAQ
   "course.faq.title": { ru: "ВОПРОСЫ", en: "QUESTIONS", ro: "ÎNTREBĂRI" },

@@ -210,7 +210,7 @@ const Program = () => {
             >
               <button
                 onClick={() => setOpenDay(isOpen ? null : i)}
-                className="w-full grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 py-6 lg:py-8 items-baseline text-left group"
+                className="w-full grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 py-6 lg:py-8 items-center text-left group"
               >
                 <h3
                   className={`lg:col-span-5 text-brutal-md transition-colors break-words ${
@@ -222,13 +222,15 @@ const Program = () => {
                 <p className="lg:col-span-5 text-xs lg:text-sm text-muted-foreground leading-relaxed">
                   {d.desc}
                 </p>
-                <span
-                  className={`lg:col-span-1 text-right text-brutal-md transition-transform flex-shrink-0 ${
-                    isOpen ? "rotate-45" : ""
-                  }`}
-                >
-                  +
-                </span>
+                <div className="lg:col-span-1 flex justify-end items-center">
+                  <span
+                    className={`inline-flex h-6 w-6 items-center justify-center text-brutal-md leading-none origin-center transition-transform duration-200 ${
+                      isOpen ? "rotate-45" : ""
+                    }`}
+                  >
+                    +
+                  </span>
+                </div>
               </button>
               {isOpen && (
                 <motion.div
@@ -357,42 +359,56 @@ const Price = () => {
   const { t } = useLang();
   const tiers = [
     {
-      name: "course.price.early",
-      amount: "course.price.early.amount",
-      note: "course.price.early.note",
-      featured: true,
-      includes: [
-        "course.price.early.inc.1",
-        "course.price.early.inc.2",
-        "course.price.early.inc.3",
-        "course.price.early.inc.4",
-      ],
-      excludes: ["course.price.early.exc.1", "course.price.early.exc.2"],
-    },
-    {
       name: "course.price.std",
       amount: "course.price.std.amount",
       note: "course.price.std.note",
+      featured: false,
       includes: [
         "course.price.std.inc.1",
         "course.price.std.inc.2",
         "course.price.std.inc.3",
         "course.price.std.inc.4",
         "course.price.std.inc.5",
+        "course.price.std.inc.6",
+        "course.price.std.inc.7",
       ],
-      excludes: ["course.price.std.exc.1"],
+      excludes: [],
     },
     {
-      name: "course.price.vip",
-      amount: "course.price.vip.amount",
-      note: "course.price.vip.note",
+      name: "course.price.pro",
+      amount: "course.price.pro.amount",
+      note: "course.price.pro.note",
+      featured: true,
       includes: [
-        "course.price.vip.inc.1",
-        "course.price.vip.inc.2",
-        "course.price.vip.inc.3",
-        "course.price.vip.inc.4",
-        "course.price.vip.inc.5",
-        "course.price.vip.inc.6",
+        "course.price.pro.inc.1",
+        "course.price.pro.inc.2",
+        "course.price.pro.inc.3",
+        "course.price.pro.inc.4",
+        "course.price.pro.inc.5",
+        "course.price.pro.inc.6",
+        "course.price.pro.inc.7",
+        "course.price.pro.inc.8",
+        "course.price.pro.inc.9",
+        "course.price.pro.inc.10",
+        "course.price.pro.inc.11",
+      ],
+      excludes: [],
+    },
+    {
+      name: "course.price.elite",
+      amount: "course.price.elite.amount",
+      note: "course.price.elite.note",
+      featured: false,
+      includes: [
+        "course.price.elite.inc.1",
+        "course.price.elite.inc.2",
+        "course.price.elite.inc.3",
+        "course.price.elite.inc.4",
+        "course.price.elite.inc.5",
+        "course.price.elite.inc.6",
+        "course.price.elite.inc.7",
+        "course.price.elite.inc.8",
+        "course.price.elite.inc.9",
       ],
       excludes: [],
     },
@@ -414,6 +430,7 @@ const Price = () => {
                 : "border-foreground/10"
             } flex flex-col`}
           >
+            <p className="text-3xl lg:text-4xl font-black uppercase tracking-[-0.05em] leading-none mb-3">{t(tier.name)}</p>
             <p className="text-brutal-lg mb-2">{t(tier.amount)}</p>
             <p className="text-brutal-sm text-muted-foreground mb-8">{t(tier.note)}</p>
 
@@ -424,7 +441,7 @@ const Price = () => {
               <ul className="space-y-2">
                 {tier.includes.map((k) => (
                   <li key={k} className="flex items-baseline gap-3 text-sm text-foreground/80">
-                    <span className="text-accent-red">+</span>
+                    <span className="text-accent-red">✓</span>
                     <span>{t(k)}</span>
                   </li>
                 ))}
