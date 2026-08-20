@@ -171,22 +171,41 @@ const Pain = () => {
   const { t } = useLang();
   const items = ["course.pain.1", "course.pain.2", "course.pain.3", "course.pain.4"];
   return (
-    <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
-      <h2 className="text-brutal-lg mb-12 lg:mb-16">{t("course.pain.title")}</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        {items.map((k, i) => (
-          <motion.div
-            key={k}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.08 }}
-            viewport={{ once: true }}
-            className="border-t border-foreground/10 py-8 lg:py-10 flex items-baseline gap-4 lg:gap-6"
-          >
-            <span className="text-brutal-md break-words">{t(k)}</span>
-          </motion.div>
-        ))}
-        <div className="border-t border-foreground/10 lg:col-span-2" />
+    <section className="scene py-24 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 overflow-hidden">
+      <motion.h2
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-brutal-lg mb-16 lg:mb-24"
+      >
+        {t("course.pain.title")}
+      </motion.h2>
+
+      <div>
+        {items.map((key, index) => {
+          const isRight = index % 2 !== 0;
+          const isLast = index === items.length - 1;
+
+          return (
+            <motion.div
+              key={key}
+              initial={{ opacity: 0, x: isRight ? 100 : -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.06 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className={`py-12 lg:py-20 ${isRight ? "text-right" : "text-left"}`}
+            >
+              <p
+                className={`text-brutal-lg break-words ${
+                  isLast ? "text-accent-red" : "text-foreground"
+                } ${isRight ? "ml-auto" : "mr-auto"} max-w-5xl`}
+              >
+                {t(key)}
+              </p>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

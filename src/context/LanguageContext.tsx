@@ -252,11 +252,11 @@ const translations: Translations = {
   },
   // Offline Course Preview (на главной)
   "offline.label": { ru: "ОФЛАЙН-ОПЫТ", en: "OFFLINE EXPERIENCE", ro: "EXPERIENȚĂ OFFLINE" },
-  "offline.title": { ru: "ОФЛАЙН-КУРСЫ", en: "OFFLINE COURSES", ro: "CURSURI OFFLINE" },
+  "offline.title": { ru: "OFFLINE SMM ACADEMY", en: "OFFLINE SMM ACADEMY", ro: "OFFLINE SMM ACADEMY" },
   "offline.desc": {
-    ru: "Уже провела несколько офлайн-потоков в Кишинёве. Сотни выпускников, реальные результаты. Сейчас открыта запись на новый поток.",
-    en: "I've already run several offline waves in Chisinau. Hundreds of graduates, real results. Registration is now open for the new wave.",
-    ro: "Am condus deja câteva fluxuri offline la Chișinău. Sute de absolvenți, rezultate reale. Înscrierile pentru noul flux sunt deschise.",
+    ru: "Освой профессию SMM-специалиста за 5 дней и начни проекты в моей команде.",
+    en: "Become an SMM specialist in 5 days and start working on projects with my team.",
+    ro: "Învață profesia de specialist SMM în 5 zile și începe să lucrezi la proiecte alături de echipa mea.",
   },
   "offline.cta": { ru: "НОВЫЙ КУРС ПО SMM →", en: "NEW SMM COURSE →", ro: "NOU CURS SMM →" },
   "offline.past": { ru: "ПРОШЛЫЕ ПОТОКИ", en: "PAST WAVES", ro: "FLUXURI ANTERIOARE" },
@@ -271,9 +271,9 @@ const translations: Translations = {
   "offline.wave.3.year": { ru: "2024", en: "2024", ro: "2024" },
   "offline.wave.3.count": { ru: "40+ УЧАСТНИКОВ", en: "40+ PARTICIPANTS", ro: "40+ PARTICIPANȚI" },
   // Upcoming wave
-  "offline.wave.4.name": { ru: "SMM SYSTEM", en: "SMM SYSTEM", ro: "SMM SYSTEM" },
+  "offline.wave.4.name": { ru: "SMM ACADEMY", en: "SMM ACADEMY", ro: "SMM ACADEMY" },
   "offline.wave.4.year": { ru: "СКОРО", en: "SOON", ro: "ÎN CURÂND" },
-  "offline.wave.4.count": { ru: "ОСТАЛОСЬ 12 МЕСТ", en: "12 SEATS LEFT", ro: "AU RĂMAS 12 LOCURI" },
+  "offline.wave.4.count": { ru: "Осталось 12 мест", en: "12 seats left", ro: "Au rămas 12 locuri" },
   "offline.wave.4.more": { ru: "ПОДРОБНЕЕ →", en: "LEARN MORE →", ro: "DETALII →" },
   // Floating CTA
   "float.cta": { ru: "КУРС ПО SMM", en: "SMM COURSE", ro: "CURS SMM" },

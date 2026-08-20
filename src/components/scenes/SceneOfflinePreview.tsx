@@ -68,23 +68,25 @@ const SceneOfflinePreview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               viewport={{ once: true }}
-              className="grid grid-cols-12 gap-4 py-6 border-t border-foreground/10 items-baseline bg-accent/5"
+              className="grid grid-cols-12 gap-4 py-6 border-t border-foreground/10 items-start bg-accent/5"
             >
-              <span className="col-span-4 text-brutal-md text-accent-red">
+              <span className="col-span-5 text-brutal-md text-accent-red">
                 {t("offline.wave.4.name")}
               </span>
-              <span className="col-span-2 text-brutal-sm text-accent-red">
+              <span className="col-span-3 text-brutal-sm text-accent-red">
                 {t("offline.wave.4.year")}
               </span>
-              <span className="col-span-2 text-brutal-sm text-muted-foreground">
-                {t("offline.wave.4.count")}
-              </span>
-              <Link
-                to="/course"
-                className="col-span-4 text-right text-brutal-sm text-accent hover:text-foreground transition-colors"
-              >
-                {t("offline.wave.4.more")}
-              </Link>
+              <div className="col-span-4 flex flex-col items-end text-right">
+                <Link
+                  to="/course"
+                  className="text-brutal-sm text-accent hover:text-foreground transition-colors"
+                >
+                  {t("offline.wave.4.more")}
+                </Link>
+                <span className="mt-2 text-xs lg:text-sm normal-case tracking-normal text-muted-foreground/70 leading-relaxed">
+                  {t("offline.wave.4.count")}
+                </span>
+              </div>
             </motion.div>
 
             <div className="border-t border-foreground/10" />
