@@ -1,4 +1,3 @@
-import { LanguageProvider } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import FloatingCourseCTA from "@/components/FloatingCourseCTA";
 import SceneImpact from "@/components/scenes/SceneImpact";
@@ -21,7 +20,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <LanguageProvider>
+    <>
       <LanguageSwitcher />
       <FloatingCourseCTA />
       <main className="bg-background">
@@ -43,7 +42,7 @@ const Index = () => {
         <SceneFinal />
         <Footer />
       </main>
-    </LanguageProvider>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 
 const lines = ["disruption.1", "disruption.2", "disruption.3", "disruption.4", "disruption.5"];
@@ -35,7 +35,7 @@ const LineReveal = ({
   isLast,
 }: {
   children: string;
-  progress: any;
+  progress: MotionValue<number>;
   start: number;
   end: number;
   isLast: boolean;

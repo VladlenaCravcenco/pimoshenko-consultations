@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -158,11 +158,6 @@ const SceneCases = () => {
   const { t } = useLang();
   const ref = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
   const [openCase, setOpenCase] = useState<string | null>(null);
   const [activeReel, setActiveReel] = useState<string | null>(null);
 
@@ -192,20 +187,15 @@ const SceneCases = () => {
 
       <div className="space-y-0">
         {cases.map((c, i) => {
-          const start = 0.05 + i * 0.18;
-          const end = start + 0.12;
-          const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-          const x = useTransform(
-            scrollYProgress,
-            [start, end],
-            [i % 2 === 0 ? -50 : 50, 0]
-          );
           const isOpen = openCase === c.key;
 
           return (
             <motion.div
               key={c.key}
-              style={{ opacity, x }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
               className="border-t border-foreground/10"
             >
               {/* Case header — clickable */}

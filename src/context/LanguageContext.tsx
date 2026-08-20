@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 
 type Lang = "ru" | "en" | "ro";
 
@@ -63,8 +63,8 @@ const translations: Translations = {
   "facts.years": { ru: "ЛЕТ В МАРКЕТИНГЕ", en: "YEARS IN MARKETING", ro: "ANI ÎN MARKETING" },
   "facts.years.desc": {
     ru: "Я вела бренды в Инстаграм с 2016 года, когда все выставляли квадратные фото, а сторис не существовала.",
-    en: "I've been leading brands on Instagram since 2016, when everyone posted square photos and stories didn't exist.",
-    ro: "Conduc branduri pe Instagram din 2016, când toți postau poze pătrate și story-urile nu existau.",
+    en: "I've been managing brands on Instagram since 2016, when everyone posted square photos and Stories didn't exist yet.",
+    ro: "Lucrez cu branduri pe Instagram din 2016, când toți publicau fotografii pătrate, iar Stories încă nu existau.",
   },
   "facts.agency": { ru: "АГЕНТСТВО 33", en: "AGENCY 33", ro: "AGENȚIA 33" },
   "facts.agency.desc": {
@@ -81,8 +81,8 @@ const translations: Translations = {
   "facts.course": { ru: "АВТОРСКИЙ КУРС SMM", en: "AUTHOR'S SMM COURSE", ro: "CURS DE AUTOR SMM" },
   "facts.course.desc": {
     ru: "За 5 дней — старт в новой профессии. Для тех, кто хочет быть SMM-экспертом и работать с брендами.",
-    en: "In 5 days — start in a new profession. For those who want to be an SMM expert and work with brands.",
-    ro: "În 5 zile — start într-o profesie nouă. Pentru cei care vor să fie expert SMM și să lucreze cu branduri.",
+    en: "Start a new career in 5 days. For anyone who wants to become an SMM specialist and work with brands.",
+    ro: "Începe o profesie nouă în 5 zile. Pentru cei care vor să devină specialiști SMM și să lucreze cu branduri.",
   },
   "facts.niches": { ru: "НИШ В ПРОДВИЖЕНИИ", en: "NICHES IN PROMOTION", ro: "NIȘE ÎN PROMOVARE" },
   "facts.niches.desc": {
@@ -288,14 +288,55 @@ const translations: Translations = {
     en: "Learn the SMM specialist profession in 5 days\nand start projects in my team",
     ro: "Stăpânește profesia de specialist SMM în 5 zile\nși începe proiecte în echipa mea",
   },
+  "course.experience.caption.strong1": { ru: "10 лет", en: "10 years", ro: "10 ani" },
+  "course.experience.caption.middle": {
+    ru: " опыта в маркетинге — в одном",
+    en: " of marketing experience — in one",
+    ro: " de experiență în marketing — într-un singur",
+  },
+  "course.experience.caption.strong2": {
+    ru: " офлайн-курсе",
+    en: " offline course",
+    ro: " curs offline",
+  },
+  "course.experience.title": {
+    ru: "Практика + офлайн-обучение",
+    en: "Hands-on practice + offline learning",
+    ro: "Practică + instruire offline",
+  },
+  "course.experience.p1": {
+    ru: "Курс создан для тех, кто хочет освоить профессию SMM-специалиста и выйти на новый уровень.",
+    en: "This course is for anyone who wants to become an SMM specialist and reach the next professional level.",
+    ro: "Cursul este creat pentru cei care vor să devină specialiști SMM și să ajungă la un nou nivel profesional.",
+  },
+  "course.experience.p2": {
+    ru: "Вы будете работать с реальными проектами, создавать контент, оформлять профессиональный профиль и соберёте портфолио, с которым сможете начать работать сразу после курса.",
+    en: "You will work on real projects, create content, build a professional profile and assemble a portfolio you can use to start working right after the course.",
+    ro: "Vei lucra la proiecte reale, vei crea conținut, îți vei construi un profil profesional și un portofoliu cu care vei putea începe să lucrezi imediat după curs.",
+  },
+  "course.experience.p3": {
+    ru: "Я расскажу, как оформить свою деятельность, идти в ногу с рынком, развиваться в профессии, выстраивать стратегию, формировать команду и делегировать.",
+    en: "I will explain how to formalize your work, keep pace with the market, grow in the profession, build a strategy, form a team and delegate.",
+    ro: "Îți voi explica cum să-ți formalizezi activitatea, să ții pasul cu piața, să evoluezi profesional, să construiești o strategie, să formezi o echipă și să delegi.",
+  },
+  "course.experience.p4": {
+    ru: "Я не учу просто вести страницы — я учу строить SMM-систему, с которой можно собрать команду под любой бизнес или вести проект самостоятельно.",
+    en: "I do not simply teach social media management — I teach you to build an SMM system that lets you assemble a team for any business or run a project independently.",
+    ro: "Nu te învăț doar să administrezi pagini — te învăț să construiești un sistem SMM cu care poți forma o echipă pentru orice afacere sau gestiona proiectul independent.",
+  },
+  "course.experience.p5": {
+    ru: "Мы заранее определим ваш уровень и подберём подходящую группу.",
+    en: "We assess your level in advance and place you in the right group.",
+    ro: "Îți evaluăm nivelul din timp și alegem grupa potrivită pentru tine.",
+  },
   "course.hero.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО", en: "RESERVE A SEAT", ro: "REZERVĂ UN LOC" },
   "course.hero.spots": { ru: "Осталось 12 мест", en: "12 seats left", ro: "Au rămas 12 locuri" },
   // Pain
   "course.pain.title": { ru: "ЕСЛИ ЭТО ПРО ТЕБЯ", en: "IF THIS IS YOU", ro: "DACĂ ASTA EȘTI TU" },
-  "course.pain.1": { ru: "НЕ ЗНАЮ КУДА РАСТИ ДАЛЬШЕ", en: "I DON'T KNOW WHERE TO GROW NEXT", ro: "NU ȘTIU ÎN COTRO SĂ MĂ DEZVOLTURMAI DEPARTE" },
-  "course.pain.2": { ru: "Я УПЕРСЯ В ПОТОЛОК", en: "I HIT A CEILING", ro: "AM AJUNS LA TAVAN" },
-  "course.pain.3": { ru: "НЕ ПОНИМАЮ, КАК ПОВЫСИТЬ ЧЕК", en: "I DON'T UNDERSTAND HOW TO INCREASE THE CHECK", ro: "NU ÎNȚLEG CUM SĂ CREȘT CHECK-UL" },
-  "course.pain.4": { ru: "Я ВЫГОРЕЛА В СВОЕЙ РАБОТЕ", en: "I BURNED OUT IN MY WORK", ro: "AM ARS ÎN MUNCĂ" },
+  "course.pain.1": { ru: "НЕ ЗНАЮ, КУДА РАСТИ ДАЛЬШЕ", en: "I DON'T KNOW HOW TO GROW FURTHER", ro: "NU ȘTIU ÎN CE DIRECȚIE SĂ MĂ DEZVOLT" },
+  "course.pain.2": { ru: "Я УПЁРСЯ В ПОТОЛОК", en: "I'VE HIT A CEILING", ro: "AM ATINS UN PLAFON PROFESIONAL" },
+  "course.pain.3": { ru: "НЕ ПОНИМАЮ, КАК ПОВЫСИТЬ ЧЕК", en: "I DON'T KNOW HOW TO RAISE MY RATES", ro: "NU ȘTIU CUM SĂ-MI MĂRESC TARIFELE" },
+  "course.pain.4": { ru: "Я ВЫГОРЕЛ В СВОЕЙ РАБОТЕ", en: "I'M BURNED OUT AT WORK", ro: "MĂ SIMT EPUIZAT PROFESIONAL" },
   // Program
   "course.prog.title": { ru: "ПРОГРАММА · 5 ДНЕЙ", en: "PROGRAM · 5 DAYS", ro: "PROGRAM · 5 ZILE" },
   "course.prog.d1.t": { ru: "ДЕНЬ 1 · СТРАТЕГИЯ", en: "DAY 1 · STRATEGY", ro: "ZIUA 1 · STRATEGIE" },
@@ -442,12 +483,38 @@ const translations: Translations = {
   "course.get.4": { ru: "ДОСТУП К ЗАКРЫТОМУ ЧАТУ ВЫПУСКНИКОВ", en: "ACCESS TO PRIVATE ALUMNI CHAT", ro: "ACCES LA CHAT-UL PRIVAT AL ABSOLVENȚILOR" },
   "course.get.5": { ru: "СЕРТИФИКАТ", en: "CERTIFICATE", ro: "CERTIFICAT" },
   "course.get.6": { ru: "ПОДДЕРЖКУ 30 ДНЕЙ ПОСЛЕ КУРСА", en: "30 DAYS POST-COURSE SUPPORT", ro: "30 ZILE SUPORT POST-CURS" },
+  "course.get.benefit.1": { ru: "Разрабатывать полноценную SMM-стратегию.", en: "Develop a complete SMM strategy.", ro: "Să dezvolți o strategie SMM completă." },
+  "course.get.benefit.2": { ru: "Собирать команду для продвижения.", en: "Build a team to promote a brand.", ro: "Să formezi o echipă pentru promovare." },
+  "course.get.benefit.3": { ru: "Регулярно повышать стоимость своих услуг.", en: "Raise your rates as your expertise grows.", ro: "Să-ți mărești tarifele pe măsură ce capeți experiență." },
+  "course.get.benefit.4": { ru: "Продавать проекты под ключ.", en: "Sell turnkey projects.", ro: "Să vinzi proiecte la cheie." },
+  "course.get.skill.1": { ru: "Анализировать целевую аудиторию и конкурентов.", en: "Analyze target audiences and competitors.", ro: "Să analizezi publicul-țintă și concurenții." },
+  "course.get.skill.2": { ru: "Создавать контент-планы.", en: "Create content plans.", ro: "Să creezi planuri de conținut." },
+  "course.get.skill.3": { ru: "Снимать профессиональный контент на телефон.", en: "Shoot professional content on a phone.", ro: "Să filmezi conținut profesionist cu telefonul." },
+  "course.get.skill.4": { ru: "Монтировать Reels и TikTok-видео.", en: "Edit Reels and TikTok videos.", ro: "Să montezi videoclipuri pentru Reels și TikTok." },
+  "course.get.skill.5": { ru: "Работать с AI-инструментами для создания контента.", en: "Use AI tools to create content.", ro: "Să folosești instrumente AI pentru crearea conținutului." },
+  "course.get.skill.6": { ru: "Оформлять Instagram-профили.", en: "Build professional Instagram profiles.", ro: "Să configurezi profiluri profesionale de Instagram." },
+  "course.get.skill.7": { ru: "Создавать продающие Stories.", en: "Create Stories that convert.", ro: "Să creezi Stories care vând." },
+  "course.get.skill.8": { ru: "Писать тексты для брендов.", en: "Write copy for brands.", ro: "Să scrii texte pentru branduri." },
+  "course.get.skill.9": { ru: "Запускать продвижение и понимать основы рекламы.", en: "Launch promotions and understand advertising fundamentals.", ro: "Să lansezi campanii de promovare și să înțelegi bazele publicității." },
+  "course.get.skill.10": { ru: "Общаться с клиентами и вести проекты.", en: "Communicate with clients and manage projects.", ro: "Să comunici cu clienții și să gestionezi proiecte." },
+  "course.get.skill.11": { ru: "Формировать стоимость своих услуг.", en: "Set the right price for your services.", ro: "Să stabilești prețul corect pentru serviciile tale." },
+  "course.get.skill.12": { ru: "Создать собственное портфолио.", en: "Build your own portfolio.", ro: "Să-ți creezi propriul portofoliu." },
+  "course.get.skill.13": { ru: "Продвигать себя как SMM-специалиста.", en: "Promote yourself as an SMM specialist.", ro: "Să te promovezi ca specialist SMM." },
+  "course.get.skill.14": { ru: "Найти первых клиентов и начать работать в профессии.", en: "Find your first clients and start your SMM career.", ro: "Să găsești primii clienți și să-ți începi cariera în SMM." },
   // Format
   "course.fmt.title": { ru: "ФОРМАТ", en: "FORMAT", ro: "FORMAT" },
   "course.fmt.dates": { ru: "ДАТЫ УТОЧНЯЮТСЯ", en: "DATES TBA", ro: "DATELE URMEAZĂ" },
   "course.fmt.place": { ru: "ОФЛАЙН · КИШИНЁВ", en: "OFFLINE · CHISINAU", ro: "OFFLINE · CHIȘINĂU" },
   "course.fmt.spots": { ru: "ТОЛЬКО 20 МЕСТ", en: "ONLY 20 SEATS", ro: "DOAR 20 LOCURI" },
   "course.fmt.lang": { ru: "RU · RO", en: "RU · RO", ro: "RU · RO" },
+  "course.fmt.date.label": { ru: "ДАТЫ", en: "DATES", ro: "DATE" },
+  "course.fmt.date.value": { ru: "7–11 сентября", en: "September 7–11", ro: "7–11 septembrie" },
+  "course.fmt.practice.label": { ru: "ПРАКТИЧЕСКИЕ ДНИ", en: "PRACTICE DAYS", ro: "ZILE PRACTICE" },
+  "course.fmt.practice.value": { ru: "12–14 сентября", en: "September 12–14", ro: "12–14 septembrie" },
+  "course.fmt.graduation.label": { ru: "ВЫПУСКНОЙ", en: "GRADUATION", ro: "FESTIVITATEA DE ABSOLVIRE" },
+  "course.fmt.graduation.value": { ru: "15 сентября · PARTY", en: "September 15 · PARTY", ro: "15 septembrie · PARTY" },
+  "course.fmt.booking.label": { ru: "БРОНЬ КУРСА", en: "COURSE DEPOSIT", ro: "REZERVAREA CURSULUI" },
+  "course.fmt.booking.value": { ru: "250€", en: "€250", ro: "250€" },
   // Price
   "course.price.title": { ru: "СТОИМОСТЬ", en: "PRICE", ro: "PREȚ" },
   "course.price.std": { ru: "STANDARD", en: "STANDARD", ro: "STANDARD" },
@@ -460,6 +527,18 @@ const translations: Translations = {
   "course.price.elite.amount": { ru: "€1000", en: "€1000", ro: "€1000" },
   "course.price.elite.note": { ru: "ПРЕМИУМ ПАКЕТ", en: "PREMIUM PACKAGE", ro: "PACHET PREMIUM" },
   "course.price.cta": { ru: "ЗАБРОНИРОВАТЬ →", en: "BOOK →", ro: "REZERVĂ →" },
+  "course.price.outcome.before": {
+    ru: "После окончания курса вы уйдёте не только с ",
+    en: "By the end of the course, you will leave not only with a ",
+    ro: "La finalul cursului vei pleca nu doar cu o ",
+  },
+  "course.price.outcome.diploma": { ru: "дипломом", en: "certificate", ro: "diplomă" },
+  "course.price.outcome.middle": {
+    ru: ", но и с готовым набором инструментов для ",
+    en: ", but also with a complete toolkit to ",
+    ro: ", ci și cu un set complet de instrumente pentru a ",
+  },
+  "course.price.outcome.end": { ru: "старта в SMM", en: "start working in SMM", ro: "începe să lucrezi în SMM" },
   // Includes / excludes labels
   "course.price.includes": { ru: "ЧТО ВХОДИТ", en: "WHAT'S INCLUDED", ro: "CE INCLUDE" },
   "course.price.excludes": { ru: "НЕ ВХОДИТ", en: "NOT INCLUDED", ro: "NU ESTE INCLUS" },
@@ -660,6 +739,9 @@ const translations: Translations = {
     ro: "LOCURI LIMITATE",
   },
   "course.final.cta": { ru: "ЗАБРОНИРОВАТЬ МЕСТО →", en: "RESERVE SEAT →", ro: "REZERVĂ LOCUL →" },
+  "course.final.booking": { ru: "Бронь курса · 250€ →", en: "Reserve your place · €250 →", ro: "Rezervă locul · 250€ →" },
+  "notFound.title": { ru: "Страница не найдена", en: "Page not found", ro: "Pagina nu a fost găsită" },
+  "notFound.home": { ru: "Вернуться на главную", en: "Return to home", ro: "Înapoi la pagina principală" },
 };
 
 const LanguageContext = createContext<{
@@ -673,7 +755,15 @@ const LanguageContext = createContext<{
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Lang>("ru");
+  const [lang, setLang] = useState<Lang>(() => {
+    const saved = window.localStorage.getItem("language");
+    return saved === "ru" || saved === "en" || saved === "ro" ? saved : "ru";
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("language", lang);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = (key: string): string => {
     return translations[key]?.[lang] || key;

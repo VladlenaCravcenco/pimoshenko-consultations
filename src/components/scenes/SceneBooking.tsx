@@ -2,11 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 import { format, addDays, isBefore, startOfDay } from "date-fns";
+import { enUS } from "date-fns/locale/en-US";
+import { ro } from "date-fns/locale/ro";
+import { ru } from "date-fns/locale/ru";
 
 const timeSlots = ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"];
 
 const SceneBooking = () => {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({ name: "", ig: "", biz: "" });
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -14,6 +17,7 @@ const SceneBooking = () => {
 
   const today = startOfDay(new Date());
   const availableDays = Array.from({ length: 14 }, (_, i) => addDays(today, i + 1));
+  const dateLocale = lang === "ru" ? ru : lang === "ro" ? ro : enUS;
 
   const textSteps = [
     { key: "name" as const, label: t("booking.step1"), placeholder: t("booking.placeholder.name") },
@@ -25,7 +29,7 @@ const SceneBooking = () => {
 
   const handlePay = () => {
     const dateStr = selectedDate ? format(selectedDate, "dd.MM.yyyy") : "";
-    const msg = `Имя: ${form.name}\nInstagram: ${form.ig}\nБизнес: ${form.biz}\nДата: ${dateStr}\nВремя: ${selectedTime}`;
+    const msg = `${t("booking.step1")}: ${form.name}\nInstagram: ${form.ig}\n${t("booking.step3")}: ${form.biz}\n${t("booking.date")}: ${dateStr}\n${t("booking.time")}: ${selectedTime}`;
     window.open(`https://wa.me/971000000000?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
@@ -96,7 +100,7 @@ const SceneBooking = () => {
                   >
                     <span className="text-brutal-sm block">{format(day, "dd")}</span>
                     <span className="text-[0.6rem] uppercase tracking-wider text-muted-foreground block mt-1">
-                      {format(day, "EEE")}
+                      {format(day, "EEE", { locale: dateLocale })}
                     </span>
                   </button>
                 );

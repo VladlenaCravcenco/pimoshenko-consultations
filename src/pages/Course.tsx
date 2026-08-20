@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { LanguageProvider, useLang } from "@/context/LanguageContext";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import { useLang } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Footer from "@/components/Footer";
 import { useRef, useState } from "react";
@@ -41,38 +41,73 @@ const Hero = () => {
   );
 };
 
+const WordReveal = ({
+  progress,
+  range,
+  text,
+  className,
+}: {
+  progress: MotionValue<number>;
+  range: [number, number];
+  text: string;
+  className?: string;
+}) => {
+  const words = text.trim().split(/\s+/);
+
+  return (
+    <span aria-label={text} className={className}>
+      {words.map((word, index) => {
+        const portion = (range[1] - range[0]) / Math.max(words.length, 1);
+        const start = range[0] + portion * index;
+        const end = Math.min(start + portion * 1.8, range[1]);
+
+        return (
+          <RevealingWord
+            key={`${word}-${index}`}
+            progress={progress}
+            range={[start, end]}
+            isLast={index === words.length - 1}
+          >
+            {word}
+          </RevealingWord>
+        );
+      })}
+    </span>
+  );
+};
+
+const RevealingWord = ({
+  children,
+  progress,
+  range,
+  isLast,
+}: {
+  children: string;
+  progress: MotionValue<number>;
+  range: [number, number];
+  isLast: boolean;
+}) => {
+  const opacity = useTransform(progress, range, [0.24, 1]);
+  const filter = useTransform(progress, range, ["brightness(0.65)", "brightness(1.15)"]);
+
+  return (
+    <motion.span
+      aria-hidden="true"
+      style={{ opacity, filter, marginRight: isLast ? 0 : "0.28em" }}
+      className="inline-block will-change-[opacity,filter]"
+    >
+      {children}
+    </motion.span>
+  );
+};
+
 const ExperienceNote = () => {
+  const { t } = useLang();
   const ref = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
-  const fillY = useTransform(scrollYProgress, [0.15, 0.9], ["100%", "0%"]);
-
-  const RevealText = ({
-    children,
-    className,
-  }: {
-    children: React.ReactNode;
-    className?: string;
-  }) => (
-    <motion.span
-      style={{
-        backgroundImage:
-          "linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.35) 32%, #ffffff 32%, #ffffff 100%)",
-        backgroundSize: "100% 220%",
-        backgroundPositionY: fillY,
-        WebkitBackgroundClip: "text",
-        backgroundClip: "text",
-        color: "transparent",
-        WebkitTextFillColor: "transparent",
-      }}
-      className={className}
-    >
-      {children}
-    </motion.span>
-  );
 
   return (
     <section ref={ref} className="scene py-16 lg:py-24 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
@@ -86,10 +121,12 @@ const ExperienceNote = () => {
           <img src={heroPortrait} alt="" className="w-full h-[420px] lg:h-[520px] object-cover object-center" />
           <div className="absolute bottom-5 left-5 right-5 bg-background/90 backdrop-blur-sm border border-foreground/10 p-4 shadow-[8px_8px_0_rgba(0,0,0,0.08)]">
             <p className="text-sm lg:text-base leading-relaxed tracking-[0.02em] text-foreground/45">
-              <RevealText className="font-black text-foreground/45">
-                10 лет
-              </RevealText>{" "}опыта в маркетинге — в одном
-              <RevealText className="font-black text-foreground/45"> офлайн-курсе</RevealText>
+              <WordReveal
+                progress={scrollYProgress}
+                range={[0.08, 0.3]}
+                text={`${t("course.experience.caption.strong1")}${t("course.experience.caption.middle")}${t("course.experience.caption.strong2")}`}
+                className="font-black"
+              />
             </p>
           </div>
         </motion.div>
@@ -102,42 +139,27 @@ const ExperienceNote = () => {
           className="space-y-5 lg:space-y-6"
         >
           <h3 className="text-brutal-lg leading-[0.9] tracking-[-0.04em] text-foreground/80">
-            <RevealText>
-              Практика + Офлайн обучение
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.2, 0.38]} text={t("course.experience.title")} />
           </h3>
 
           <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
-            <RevealText>
-              Курс создан для тех, кто хочет освоить SMM-профессию и выйти на новый уровень.
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.32, 0.5]} text={t("course.experience.p1")} />
           </p>
 
           <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
-            <RevealText>
-              Вы будете работать с реальными проектами, создавать контент, оформлять профессиональный профиль
-              и запускать работу, с которой сможете начать уже после окончания курса.
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.42, 0.62]} text={t("course.experience.p2")} />
           </p>
 
           <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
-            <RevealText>
-              Я расскажу, как узаконить профессию, как идти в ногу с рынком, куда расти из SMM-специалиста,
-              как выстраивать стратегию, командообразование и делегирование.
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.52, 0.72]} text={t("course.experience.p3")} />
           </p>
 
           <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
-            <RevealText>
-              Я не учу вести страницы — я учу строить систему SMM, которая позволяет собирать команду под
-              любой тип бизнеса или вести его самостоятельно.
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.62, 0.82]} text={t("course.experience.p4")} />
           </p>
 
           <p className="text-sm lg:text-base leading-relaxed text-foreground/80">
-            <RevealText>
-              Мы определяем ваш уровень заранее и принимаем решение, в какую группу вас лучше определить.
-            </RevealText>
+            <WordReveal progress={scrollYProgress} range={[0.74, 0.9]} text={t("course.experience.p5")} />
           </p>
         </motion.div>
       </div>
@@ -332,27 +354,14 @@ const Program = () => {
 const WhatYouGet = () => {
   const { t } = useLang();
   const benefits = [
-    "Разрабатывать полноценную SMM-стратегию.",
-    "Собрать свою команду для продвижения.",
-    "Повышать стоимость продукта каждые пол года.",
-    "Продавать проекты под ключ.",
+    "course.get.benefit.1",
+    "course.get.benefit.2",
+    "course.get.benefit.3",
+    "course.get.benefit.4",
   ];
 
   const skills = [
-    "Анализировать целевую аудиторию и конкурентов.",
-    "Создавать контент-планы.",
-    "Снимать профессиональный контент на телефон.",
-    "Монтировать Reels и TikTok.",
-    "Работать с AI-инструментами для создания контента.",
-    "Оформлять Instagram-профили.",
-    "Создавать продающие Stories.",
-    "Писать тексты для брендов.",
-    "Запускать продвижение и понимать основы рекламы.",
-    "Общаться с клиентами и вести проекты.",
-    "Формировать стоимость своих услуг.",
-    "Создать собственное портфолио.",
-    "Продвигать себя как SMM-специалиста.",
-    "Найти первых клиентов и начать работать в профессии.",
+    ...Array.from({ length: 14 }, (_, index) => `course.get.skill.${index + 1}`),
   ];
 
   return (
@@ -370,7 +379,7 @@ const WhatYouGet = () => {
             className="flex items-center gap-4 lg:gap-5 border-t border-foreground/10 py-4 lg:py-5 text-left"
           >
             <span className="text-accent-red text-xl lg:text-2xl leading-none flex-shrink-0">→</span>
-            <span className="text-[1.125rem] leading-tight break-words font-medium">{item}</span>
+            <span className="text-[1.125rem] leading-tight break-words font-medium">{t(item)}</span>
           </motion.div>
         ))}
 
@@ -386,7 +395,7 @@ const WhatYouGet = () => {
             >
               <span className="text-accent-red text-lg lg:text-xl leading-none mt-1 flex-shrink-0">→</span>
               <span className="text-[1.125rem] leading-relaxed break-words text-foreground/90">
-                {skill}
+                {t(skill)}
               </span>
             </motion.div>
           ))}
@@ -399,10 +408,10 @@ const WhatYouGet = () => {
 const Format = () => {
   const { t } = useLang();
   const items = [
-    { label: "ДАТЫ", value: "7–11 сентября" },
-    { label: "ПРАКТИЧЕСКИЕ ДНИ", value: "12–13–14" },
-    { label: "ВЫПУСКНОЙ", value: "15 сентября · PARTY" },
-    { label: "БРОНЬ КУРСА", value: "250€" },
+    { label: "course.fmt.date.label", value: "course.fmt.date.value" },
+    { label: "course.fmt.practice.label", value: "course.fmt.practice.value" },
+    { label: "course.fmt.graduation.label", value: "course.fmt.graduation.value" },
+    { label: "course.fmt.booking.label", value: "course.fmt.booking.value" },
   ];
 
   return (
@@ -418,10 +427,10 @@ const Format = () => {
             }`}
           >
             <p className="text-xs lg:text-sm uppercase tracking-[0.18em] text-accent-red mb-3">
-              {it.label}
+              {t(it.label)}
             </p>
             <p className="text-2xl lg:text-4xl font-black uppercase tracking-[-0.06em] leading-none">
-              {it.value}
+              {t(it.value)}
             </p>
           </div>
         ))}
@@ -557,7 +566,7 @@ const Price = () => {
 
       <div className="mt-16 lg:mt-20 border-t border-foreground/10 pt-8 lg:pt-10">
         <p className="max-w-5xl text-2xl lg:text-4xl xl:text-5xl font-black uppercase tracking-[-0.06em] leading-[1.02]">
-          После окончания курса вы выйдете не только с <span className="text-accent-red">дипломом</span>, но и с готовым набором инструментов для <span className="text-accent-red">старта в SMM</span>
+          {t("course.price.outcome.before")}<span className="text-accent-red">{t("course.price.outcome.diploma")}</span>{t("course.price.outcome.middle")}<span className="text-accent-red">{t("course.price.outcome.end")}</span>
         </p>
       </div>
     </section>
@@ -629,7 +638,7 @@ const Final = () => {
         href="#price"
         className="inline-flex items-center justify-center bg-accent text-accent-foreground px-8 lg:px-12 py-5 lg:py-6 text-xl lg:text-3xl font-black uppercase tracking-[-0.06em] hover:bg-foreground hover:text-background transition-colors"
       >
-        Бронь курса · 250€ →
+        {t("course.final.booking")}
       </a>
     </section>
   );
@@ -654,10 +663,6 @@ const CourseInner = () => (
   </>
 );
 
-const Course = () => (
-  <LanguageProvider>
-    <CourseInner />
-  </LanguageProvider>
-);
+const Course = () => <CourseInner />;
 
 export default Course;
