@@ -218,23 +218,38 @@ const Who = () => {
   ];
 
   return (
-    <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10 bg-secondary">
-      <h2 className="text-brutal-lg mb-10 lg:mb-16">{t("course.who.title")}</h2>
+    <section className="scene py-16 lg:py-40 px-6 lg:px-16 border-t border-foreground/10">
+      <motion.h2
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-brutal-lg mb-12 lg:mb-20"
+      >
+        {t("course.who.title")}
+      </motion.h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-foreground/10">
         {items.map((item, index) => (
           <motion.div
             key={item.titleKey}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.08 }}
-            viewport={{ once: true }}
-            className="border border-foreground/10 bg-background/60 p-4 lg:p-5 min-h-[160px] flex flex-col justify-between"
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            viewport={{ once: true, amount: 0.25 }}
+            className="group border-t border-foreground/10 py-10 lg:py-20 lg:pr-8 xl:pr-16"
           >
-            <h3 className="text-brutal-md leading-tight mb-1 text-foreground break-words">
+            <h3
+              className={`text-brutal-lg leading-[0.9] mb-7 lg:mb-10 break-words transition-colors duration-500 ${
+                index % 2 === 0 ? "text-accent-red" : "text-foreground"
+              }`}
+            >
               {t(item.titleKey)}
             </h3>
-            <p className="text-xs lg:text-sm text-foreground/80 leading-relaxed mt-0">
+            <p
+              className="text-xs lg:text-sm text-muted-foreground/70 leading-relaxed max-w-md"
+              style={{ fontFamily: "'Space Grotesk', sans-serif", textTransform: "none", letterSpacing: "0" }}
+            >
               {t(item.textKey)}
             </p>
           </motion.div>
